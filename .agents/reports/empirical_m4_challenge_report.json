@@ -1,0 +1,345 @@
+{
+  "timestamp": "2026-08-26T13:55:36.460Z",
+  "milestone": "M4",
+  "challenger": "challenger_m4_2",
+  "overallVerdict": "PASS",
+  "acceptanceCriteria": {
+    "ac1_assetCheck": {
+      "status": "PASS",
+      "totalAssets": 6,
+      "passedAssets": 6,
+      "results": {
+        "ally_assault.png": {
+          "passed": true,
+          "width": 192,
+          "height": 256,
+          "transRatio": 0.6028,
+          "opaqueRatio": 0.3796,
+          "semiAlphaCount": 864,
+          "uniqueColorCount": 252,
+          "sha256": "b89c1b41ec1fd043d542749e1966100787d3b31f5b593c7075b9aa2922a72281"
+        },
+        "ally_recon.png": {
+          "passed": true,
+          "width": 192,
+          "height": 256,
+          "transRatio": 0.6417,
+          "opaqueRatio": 0.3435,
+          "semiAlphaCount": 729,
+          "uniqueColorCount": 251,
+          "sha256": "ea2d020b168a5d6d02d66cccd375956db7854b386ee6e153d034cc0b00dff635"
+        },
+        "ally_heavy.png": {
+          "passed": true,
+          "width": 192,
+          "height": 256,
+          "transRatio": 0.6658,
+          "opaqueRatio": 0.3163,
+          "semiAlphaCount": 881,
+          "uniqueColorCount": 249,
+          "sha256": "7858549240f335a7c9e2a23380298f99d1805ed3b9c478df02f9c8c8870943ba"
+        },
+        "enemy_mutant.png": {
+          "passed": true,
+          "width": 192,
+          "height": 256,
+          "transRatio": 0.6101,
+          "opaqueRatio": 0.3726,
+          "semiAlphaCount": 850,
+          "uniqueColorCount": 254,
+          "sha256": "67e6fb5780f7ec4781689f971931534a906ecd3712c2109692c3df83407b976d"
+        },
+        "enemy_scout.png": {
+          "passed": true,
+          "width": 192,
+          "height": 256,
+          "transRatio": 0.6361,
+          "opaqueRatio": 0.3462,
+          "semiAlphaCount": 870,
+          "uniqueColorCount": 255,
+          "sha256": "9d730e78cfd4a065e613115b55d3c0135e4de3c8993e261230fef18bbbdbc480"
+        },
+        "enemy_heavy.png": {
+          "passed": true,
+          "width": 192,
+          "height": 256,
+          "transRatio": 0.6164,
+          "opaqueRatio": 0.3669,
+          "semiAlphaCount": 819,
+          "uniqueColorCount": 254,
+          "sha256": "291c5c37e85491e50efa58ec5f11ca93f9e36c48a54e7d32b202d69954a3b67a"
+        }
+      }
+    },
+    "ac2_domAndNetworkIntegrity": {
+      "status": "PASS",
+      "dom": {
+        "status": "PASS",
+        "cellsCount": 100,
+        "unitsCount": 6,
+        "squadCardsCount": 3,
+        "units": [
+          {
+            "id": "unit-ally_assault_1",
+            "className": "unit player ally_assault assault selected",
+            "leftStyle": "240px",
+            "topStyle": "540px",
+            "zIndex": 195,
+            "hasSprite": true,
+            "bgImage": "url(\"http://127.0.0.1:3000/assets/characters/ally_assault.png\")",
+            "hasHpBar": true,
+            "hasShadow": true,
+            "rect": {
+              "left": 647.89404296875,
+              "top": 793.893310546875,
+              "right": 717,
+              "bottom": 865.7525634765625,
+              "width": 69.10595703125,
+              "height": 71.8592529296875
+            }
+          },
+          {
+            "id": "unit-enemy_mutant_1",
+            "className": "unit enemy enemy_mutant mutant",
+            "leftStyle": "420px",
+            "topStyle": "540px",
+            "zIndex": 95,
+            "hasSprite": true,
+            "bgImage": "url(\"http://127.0.0.1:3000/assets/characters/enemy_mutant.png\")",
+            "hasHpBar": true,
+            "hasShadow": true,
+            "rect": {
+              "left": 851.4727172851562,
+              "top": 793.893310546875,
+              "right": 924.31787109375,
+              "bottom": 865.7525634765625,
+              "width": 72.84515380859375,
+              "height": 71.8592529296875
+            }
+          },
+          {
+            "id": "unit-ally_recon_2",
+            "className": "unit player ally_recon recon",
+            "leftStyle": "60px",
+            "topStyle": "360px",
+            "zIndex": 65,
+            "hasSprite": true,
+            "bgImage": "url(\"http://127.0.0.1:3000/assets/characters/ally_recon.png\")",
+            "hasHpBar": true,
+            "hasShadow": true,
+            "rect": {
+              "left": 461.8598937988281,
+              "top": 599.8934936523438,
+              "right": 530.4332275390625,
+              "bottom": 661.24072265625,
+              "width": 68.57333374023438,
+              "height": 61.34722900390625
+            }
+          },
+          {
+            "id": "unit-ally_heavy_3",
+            "className": "unit player ally_heavy heavy",
+            "leftStyle": "120px",
+            "topStyle": "60px",
+            "zIndex": 15,
+            "hasSprite": true,
+            "bgImage": "url(\"http://127.0.0.1:3000/assets/characters/ally_heavy.png\")",
+            "hasHpBar": true,
+            "hasShadow": true,
+            "rect": {
+              "left": 547.4082641601562,
+              "top": 334.089599609375,
+              "right": 606.4534301757812,
+              "bottom": 382.4134826660156,
+              "width": 59.045166015625,
+              "height": 48.323883056640625
+            }
+          },
+          {
+            "id": "unit-enemy_scout_2",
+            "className": "unit enemy enemy_scout infiltrator",
+            "leftStyle": "540px",
+            "topStyle": "300px",
+            "zIndex": 55,
+            "hasSprite": true,
+            "bgImage": "url(\"http://127.0.0.1:3000/assets/characters/enemy_scout.png\")",
+            "hasHpBar": true,
+            "hasShadow": true,
+            "rect": {
+              "left": 959.6829223632812,
+              "top": 541.5415649414062,
+              "right": 1027.944580078125,
+              "bottom": 599.8934936523438,
+              "width": 68.26165771484375,
+              "height": 58.3519287109375
+            }
+          },
+          {
+            "id": "unit-enemy_heavy_3",
+            "className": "unit enemy enemy_heavy enforcer",
+            "leftStyle": "300px",
+            "topStyle": "300px",
+            "zIndex": 55,
+            "hasSprite": true,
+            "bgImage": "url(\"http://127.0.0.1:3000/assets/characters/enemy_heavy.png\")",
+            "hasHpBar": true,
+            "hasShadow": true,
+            "rect": {
+              "left": 717,
+              "top": 541.5415649414062,
+              "right": 779.1889038085938,
+              "bottom": 599.8934936523438,
+              "width": 62.18890380859375,
+              "height": 58.3519287109375
+            }
+          }
+        ],
+        "interactions": [
+          {
+            "test": "squad_card_selection",
+            "passed": true
+          },
+          {
+            "test": "move_highlight",
+            "passed": true,
+            "count": 30
+          },
+          {
+            "test": "shoot_preview",
+            "passed": true,
+            "isPreviewVisible": false
+          }
+        ]
+      },
+      "network": {
+        "status": "PASS",
+        "totalRequests": 12,
+        "totalErrors": 0,
+        "errors": []
+      },
+      "console": {
+        "status": "PASS",
+        "totalLogs": 0,
+        "totalErrors": 0,
+        "errors": []
+      }
+    },
+    "ac3_layoutValidation": {
+      "status": "PASS",
+      "viewports": [
+        {
+          "name": "Standard Desktop (1440x900)",
+          "passed": true,
+          "viewport": {
+            "width": 1440,
+            "height": 900
+          },
+          "containerRect": {
+            "left": 127,
+            "top": 20,
+            "right": 1307,
+            "bottom": 1240,
+            "width": 1180,
+            "height": 1220
+          },
+          "gridRect": {
+            "left": 375.5019226074219,
+            "top": 293.7447814941406,
+            "right": 1058.4980163574219,
+            "bottom": 870.3192443847656,
+            "width": 682.99609375,
+            "height": 576.574462890625
+          },
+          "uiPanelRect": {
+            "left": 158,
+            "top": 890,
+            "right": 1276,
+            "bottom": 1209,
+            "width": 1118,
+            "height": 319
+          },
+          "verticalClearance": 19.680755615234375,
+          "uiClipsGrid": false,
+          "containerFits": true,
+          "duplicateCollisions": []
+        },
+        {
+          "name": "Compact Laptop (1280x800)",
+          "passed": true,
+          "viewport": {
+            "width": 1280,
+            "height": 800
+          },
+          "containerRect": {
+            "left": 47,
+            "top": 20,
+            "right": 1227,
+            "bottom": 1240,
+            "width": 1180,
+            "height": 1220
+          },
+          "gridRect": {
+            "left": 295.5019226074219,
+            "top": 293.7447814941406,
+            "right": 978.4980163574219,
+            "bottom": 870.3192443847656,
+            "width": 682.99609375,
+            "height": 576.574462890625
+          },
+          "uiPanelRect": {
+            "left": 78,
+            "top": 890,
+            "right": 1196,
+            "bottom": 1209,
+            "width": 1118,
+            "height": 319
+          },
+          "verticalClearance": 19.680755615234375,
+          "uiClipsGrid": false,
+          "containerFits": true,
+          "duplicateCollisions": []
+        },
+        {
+          "name": "Widescreen Full HD (1920x1080)",
+          "passed": true,
+          "viewport": {
+            "width": 1920,
+            "height": 1080
+          },
+          "containerRect": {
+            "left": 367,
+            "top": 20,
+            "right": 1547,
+            "bottom": 1240,
+            "width": 1180,
+            "height": 1220
+          },
+          "gridRect": {
+            "left": 615.501953125,
+            "top": 293.7447814941406,
+            "right": 1298.498046875,
+            "bottom": 870.3192443847656,
+            "width": 682.99609375,
+            "height": 576.574462890625
+          },
+          "uiPanelRect": {
+            "left": 398,
+            "top": 890,
+            "right": 1516,
+            "bottom": 1209,
+            "width": 1118,
+            "height": 319
+          },
+          "verticalClearance": 19.680755615234375,
+          "uiClipsGrid": false,
+          "containerFits": true,
+          "duplicateCollisions": []
+        }
+      ]
+    },
+    "ac4_combatEngineInvariants": {
+      "status": "PASS",
+      "violations": []
+    }
+  }
+}

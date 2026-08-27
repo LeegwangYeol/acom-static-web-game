@@ -1,0 +1,146 @@
+{
+  "timestamp": "2026-08-27T01:44:14.966Z",
+  "gameUrl": "http://127.0.0.1:50485/index.html",
+  "mode": "static_serverless",
+  "status": "PASS",
+  "domVerification": {
+    "hasUnitsLayer": true,
+    "hasGrid": true,
+    "hasUiPanel": true,
+    "hasSquadDock": true,
+    "unitsCount": 6,
+    "units": [
+      {
+        "id": "unit-ally_assault_1",
+        "className": "unit player ally_assault assault selected",
+        "left": "60px",
+        "top": "60px",
+        "zIndex": "15",
+        "hasSprite": true,
+        "bgImage": "url(\"http://127.0.0.1:50485/assets/characters/ally_assault.png\")",
+        "hasHpBar": true
+      },
+      {
+        "id": "unit-ally_recon_1",
+        "className": "unit player ally_recon recon",
+        "left": "0px",
+        "top": "180px",
+        "zIndex": "35",
+        "hasSprite": true,
+        "bgImage": "url(\"http://127.0.0.1:50485/assets/characters/ally_recon.png\")",
+        "hasHpBar": true
+      },
+      {
+        "id": "unit-ally_heavy_1",
+        "className": "unit player ally_heavy heavy",
+        "left": "180px",
+        "top": "0px",
+        "zIndex": "5",
+        "hasSprite": true,
+        "bgImage": "url(\"http://127.0.0.1:50485/assets/characters/ally_heavy.png\")",
+        "hasHpBar": true
+      },
+      {
+        "id": "unit-enemy_mutant_1",
+        "className": "unit enemy enemy_mutant mutant",
+        "left": "480px",
+        "top": "480px",
+        "zIndex": "85",
+        "hasSprite": true,
+        "bgImage": "url(\"http://127.0.0.1:50485/assets/characters/enemy_mutant.png\")",
+        "hasHpBar": true
+      },
+      {
+        "id": "unit-enemy_scout_1",
+        "className": "unit enemy enemy_scout infiltrator",
+        "left": "540px",
+        "top": "300px",
+        "zIndex": "55",
+        "hasSprite": true,
+        "bgImage": "url(\"http://127.0.0.1:50485/assets/characters/enemy_scout.png\")",
+        "hasHpBar": true
+      },
+      {
+        "id": "unit-enemy_heavy_1",
+        "className": "unit enemy enemy_heavy enforcer",
+        "left": "300px",
+        "top": "540px",
+        "zIndex": "95",
+        "hasSprite": true,
+        "bgImage": "url(\"http://127.0.0.1:50485/assets/characters/enemy_heavy.png\")",
+        "hasHpBar": true
+      }
+    ]
+  },
+  "network": {
+    "totalRequests": 9,
+    "totalErrors": 0,
+    "zero404s": true,
+    "apiRequestsCount": 0,
+    "zeroApiRequests": true,
+    "apiRequests": [],
+    "errors": [],
+    "requests": [
+      {
+        "url": "http://127.0.0.1:50485/index.html",
+        "status": 200,
+        "statusText": "OK",
+        "mimeType": "text/html"
+      },
+      {
+        "url": "http://127.0.0.1:50485/assets/characters/ally_assault.png",
+        "status": 200,
+        "statusText": "OK",
+        "mimeType": "image/png"
+      },
+      {
+        "url": "http://127.0.0.1:50485/assets/characters/enemy_mutant.png",
+        "status": 200,
+        "statusText": "OK",
+        "mimeType": "image/png"
+      },
+      {
+        "url": "http://127.0.0.1:50485/style.css",
+        "status": 200,
+        "statusText": "OK",
+        "mimeType": "text/css"
+      },
+      {
+        "url": "http://127.0.0.1:50485/game.js",
+        "status": 200,
+        "statusText": "OK",
+        "mimeType": "application/javascript"
+      },
+      {
+        "url": "http://127.0.0.1:50485/assets/characters/ally_recon.png",
+        "status": 200,
+        "statusText": "OK",
+        "mimeType": "image/png"
+      },
+      {
+        "url": "http://127.0.0.1:50485/assets/characters/enemy_scout.png",
+        "status": 200,
+        "statusText": "OK",
+        "mimeType": "image/png"
+      },
+      {
+        "url": "http://127.0.0.1:50485/assets/characters/enemy_heavy.png",
+        "status": 200,
+        "statusText": "OK",
+        "mimeType": "image/png"
+      },
+      {
+        "url": "http://127.0.0.1:50485/assets/characters/ally_heavy.png",
+        "status": 200,
+        "statusText": "OK",
+        "mimeType": "image/png"
+      }
+    ]
+  },
+  "console": {
+    "totalLogs": 0,
+    "totalErrors": 0,
+    "errors": [],
+    "logs": []
+  }
+}

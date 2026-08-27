@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ACOM: Tactical Warfare | Sci-Fi Turn-Based Combat</title>
+    <link rel="icon" href="data:,">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;900&family=Rajdhani:wght@500;600;700&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="game-container">
+        <!-- TOP STATUS HEADER -->
+        <header>
+            <div class="header-brand">
+                <div class="logo-crest"></div>
+                <div class="header-title-block">
+                    <h1>ACOM: TACTICAL WARFARE</h1>
+                    <span class="sub-heading">SECTOR 7 // HIGH-RESOLUTION TACTICAL GRID</span>
+                </div>
+            </div>
+            <div id="status-bar">
+                <div class="turn-box">
+                    <span class="status-label">TACTICAL PHASE</span>
+                    <span id="turn-indicator">PLAYER TURN</span>
+                </div>
+                <div class="ap-box">
+                    <span class="status-label">ACTION POOL</span>
+                    <span id="ap-counter">AP: 2</span>
+                </div>
+            </div>
+        </header>
+
+        <!-- SQUAD ROSTER DOCK -->
+        <div id="squad-dock" class="squad-dock">
+            <!-- Dynamically populated ally squad cards -->
+        </div>
+
+        <!-- ISOMETRIC BATTLEFIELD -->
+        <div id="map-wrapper">
+            <div id="grid-container">
+                <!-- Grid cells (background and cover) -->
+            </div>
+            <div id="units-layer">
+                <!-- High-res 2D unit sprites dynamically positioned here -->
+            </div>
+        </div>
+
+        <!-- MAIN TACTICAL HUD CONSOLE -->
+        <div id="ui-panel">
+            <!-- ACTIVE OPERATIVE CONSOLE -->
+            <div class="panel-box" id="unit-info">
+                <div class="panel-header">
+                    <h3>OPERATIVE CONSOLE</h3>
+                    <span id="unit-class-badge" class="badge badge-class">ASSAULT</span>
+                </div>
+                <div class="unit-console-body">
+                    <div class="portrait-frame">
+                        <img id="unit-portrait-img" src="assets/characters/ally_assault.png" alt="Active Unit Portrait">
+                        <div class="portrait-glow"></div>
+                    </div>
+                    <div class="unit-stats-block">
+                        <h3 id="unit-name">ASSAULT RANGER</h3>
+                        <div class="meter-group">
+                            <div class="meter-label">
+                                <span>HEALTH</span>
+                                <span id="unit-hp">10/10</span>
+                            </div>
+                            <div class="meter-bar hp-meter">
+                                <div id="unit-hp-fill" class="meter-fill hp-fill" style="width: 100%;"></div>
+                            </div>
+                        </div>
+                        <div class="stat-pills-grid">
+                            <div class="stat-pill">
+                                <span class="stat-name">AIM</span>
+                                <span class="stat-val" id="unit-aim">80%</span>
+                            </div>
+                            <div class="stat-pill">
+                                <span class="stat-name">MOBILITY</span>
+                                <span class="stat-val" id="unit-mobility">4</span>
+                            </div>
+                            <div class="stat-pill">
+                                <span class="stat-name">DAMAGE</span>
+                                <span class="stat-val" id="unit-damage">4</span>
+                            </div>
+                            <div class="stat-pill">
+                                <span class="stat-name">RANGE</span>
+                                <span class="stat-val" id="unit-range">5</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- ACTION COMMAND CONTROLS -->
+                <div id="action-menu">
+                    <button id="btn-move" class="action-btn action-move">
+                        <span class="key-shortcut">[M]</span>
+                        <span class="btn-label">TACTICAL MOVE</span>
+                        <span class="cost-badge">1 AP</span>
+                    </button>
+                    <button id="btn-shoot" class="action-btn action-shoot">
+                        <span class="key-shortcut">[S]</span>
+                        <span class="btn-label">ENGAGE TARGET</span>
+                        <span class="cost-badge">ALL AP</span>
+                    </button>
+                    <button id="btn-end-turn" class="action-btn action-end-turn">
+                        <span class="key-shortcut">[SPACE]</span>
+                        <span class="btn-label">PASS TURN</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- INTERACTIVE TARGET PREVIEW HUD -->
+            <div class="panel-box" id="target-preview-panel">
+                <div class="panel-header">
+                    <h3>TARGET DIAGNOSTICS</h3>
+                    <span id="target-class-badge" class="badge badge-enemy">SCANNING</span>
+                </div>
+                <div id="target-preview-content">
+                    <div id="target-preview-idle" class="target-idle-state">
+                        <div class="radar-sweep-box">
+                            <div class="radar-sweep"></div>
+                            <div class="radar-crosshair"></div>
+                        </div>
+                        <p class="idle-text">TACTICAL SENSORS ACTIVE</p>
+                        <span class="idle-subtext">Hover hostile unit or target cell to preview ballistic hit chance & cover modifiers.</span>
+                    </div>
+                    <div id="target-preview-active" class="target-active-state" style="display: none;">
+                        <div class="target-portrait-row">
+                            <div class="target-portrait-frame">
+                                <img id="target-portrait-img" src="assets/characters/enemy_mutant.png" alt="Target Portrait">
+                            </div>
+                            <div class="target-info-summary">
+                                <h4 id="target-name">BIOWEAPON MUTANT</h4>
+                                <div class="target-hp-row">
+                                    <span>HP:</span>
+                                    <span id="target-hp-text">8/8</span>
+                                    <div class="target-hp-mini-bar">
+                                        <div id="target-hp-fill" class="target-hp-fill" style="width: 100%;"></div>
+                                    </div>
+                                </div>
+                                <div id="target-cover-badge" class="cover-badge cover-none">NO COVER (FLANKED)</div>
+                            </div>
+                        </div>
+                        <div class="calc-breakdown-card">
+                            <div class="calc-main-row">
+                                <span class="calc-label">ESTIMATED HIT CHANCE</span>
+                                <span id="target-hit-chance" class="calc-val-hit">76%</span>
+                            </div>
+                            <div class="calc-factors">
+                                <div class="factor-item">
+                                    <span>Base Aim:</span>
+                                    <span id="target-base-aim">80%</span>
+                                </div>
+                                <div class="factor-item">
+                                    <span>Cover Defense:</span>
+                                    <span id="target-cover-mod">-0%</span>
+                                </div>
+                                <div class="factor-item">
+                                    <span>Distance Mod:</span>
+                                    <span id="target-dist-mod">-4%</span>
+                                </div>
+                                <div class="factor-item factor-dmg">
+                                    <span>Expected Damage:</span>
+                                    <span id="target-expected-dmg" class="dmg-val">4 DMG</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- COMBAT TERMINAL FEED -->
+            <div class="panel-box" id="combat-log-container">
+                <div class="panel-header">
+                    <h3>TACTICAL TERMINAL</h3>
+                    <span class="terminal-badge">LIVE FEED</span>
+                </div>
+                <div id="combat-log">
+                    <div class="log-entry log-sys"><span class="log-tag tag-sys">[SYS]</span> Tactical HUD Online. All systems green.</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- FULLSCREEN TURN TRANSITION BANNER -->
+    <div id="turn-banner" class="turn-banner-overlay">
+        <div class="banner-glitch-layer"></div>
+        <div class="banner-content">
+            <span class="banner-sub">TACTICAL INITIATIVE SHIFT</span>
+            <h2 id="turn-banner-text">PLAYER PHASE</h2>
+            <div class="banner-line"></div>
+        </div>
+    </div>
+
+    <!-- MISSION COMPLETE / DEFEAT MODAL DIALOG -->
+    <div id="mission-modal" class="mission-modal-overlay">
+        <div class="mission-modal-card">
+            <div class="modal-decor-top"></div>
+            <div class="modal-status-icon" id="modal-status-icon"></div>
+            <h2 id="modal-title">MISSION ACCOMPLISHED</h2>
+            <p id="modal-subtitle">All hostile biothreats eliminated. Sector secure.</p>
+            
+            <div class="modal-stats-grid">
+                <div class="modal-stat-box">
+                    <span class="modal-stat-label">OUTCOME</span>
+                    <span class="modal-stat-val" id="modal-stat-status">VICTORY</span>
+                </div>
+                <div class="modal-stat-box">
+                    <span class="modal-stat-label">SURVIVORS</span>
+                    <span class="modal-stat-val" id="modal-stat-survivors">3 / 3</span>
+                </div>
+                <div class="modal-stat-box">
+                    <span class="modal-stat-label">ENEMIES DEFEATED</span>
+                    <span class="modal-stat-val" id="modal-stat-kills">3 / 3</span>
+                </div>
+            </div>
+
+            <div class="modal-actions">
+                <button id="btn-redeploy" class="action-btn redeploy-btn">
+                    <span>REDEPLOY STRIKE TEAM</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="game.js"></script>
+</body>
+</html>

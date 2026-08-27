@@ -1,0 +1,20 @@
+{
+  "name": "acom",
+  "version": "1.0.0",
+  "description": "ACOM: Tactical Warfare - Pure Static Serverless Client-Side Turn-Based Game",
+  "main": "game.js",
+  "scripts": {
+    "test": "node tests/run_all_tests.js"
+  },
+  "keywords": [
+    "turn-based",
+    "tactical",
+    "xcom",
+    "static",
+    "serverless"
+  ],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {}
+}

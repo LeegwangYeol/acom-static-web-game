@@ -1,0 +1,145 @@
+{
+  "suite": "Adversarial & Empirical Challenge Harness 1 (challenger_static_1)",
+  "timestamp": "2026-08-27T01:44:32.276Z",
+  "testsPassed": 22,
+  "testsFailed": 0,
+  "categories": {
+    "Boundaries & Types": {
+      "passed": 5,
+      "failed": 0,
+      "tests": [
+        {
+          "name": "Valid Boundary Movement (Corners & Free Edges)",
+          "status": "PASS"
+        },
+        {
+          "name": "Out-of-Bounds Movement Rejection (Negative & >9)",
+          "status": "PASS"
+        },
+        {
+          "name": "Non-Integer Float Coordinates Rejection (e.g. 2.5, 2.99)",
+          "status": "PASS"
+        },
+        {
+          "name": "NaN, Null, Undefined, String & Object Coordinates",
+          "status": "PASS"
+        },
+        {
+          "name": "Malformed Actions and Null/Empty Payloads Resiliency",
+          "status": "PASS"
+        }
+      ]
+    },
+    "AP & Turn Lifecycle": {
+      "passed": 4,
+      "failed": 0,
+      "tests": [
+        {
+          "name": "Strict AP Consumption on Move (1 AP each)",
+          "status": "PASS"
+        },
+        {
+          "name": "Strict AP Consumption on Shoot (Full AP Depletion)",
+          "status": "PASS"
+        },
+        {
+          "name": "Move then Shoot Sequence (AP 2 -> 1 -> 0)",
+          "status": "PASS"
+        },
+        {
+          "name": "End Turn AP Restoration and Turn Transition",
+          "status": "PASS"
+        }
+      ]
+    },
+    "Cover Defense": {
+      "passed": 5,
+      "failed": 0,
+      "tests": [
+        {
+          "name": "Cover Defense Orthogonal Directions (N, S, E, W)",
+          "status": "PASS"
+        },
+        {
+          "name": "Multi-Cover Maximum Resolution (Half + Full = 40)",
+          "status": "PASS"
+        },
+        {
+          "name": "Diagonal-Only Cover yields 0 Defense",
+          "status": "PASS"
+        },
+        {
+          "name": "Boundary Edge Defense Calculations (Corner / Edge Units)",
+          "status": "PASS"
+        },
+        {
+          "name": "Ballistic Hit Chance Clamping [0, 100] across All Distances & Archetypes",
+          "status": "PASS"
+        }
+      ]
+    },
+    "Target Guards": {
+      "passed": 4,
+      "failed": 0,
+      "tests": [
+        {
+          "name": "Friendly Fire Rejection (Ally cannot target Ally)",
+          "status": "PASS"
+        },
+        {
+          "name": "Self-Targeting Rejection (Unit cannot shoot itself)",
+          "status": "PASS"
+        },
+        {
+          "name": "Dead Target Rejection (Cannot shoot dead enemy)",
+          "status": "PASS"
+        },
+        {
+          "name": "Dead Actor Action Rejection (Dead player cannot move or shoot)",
+          "status": "PASS"
+        }
+      ]
+    },
+    "Enemy AI": {
+      "passed": 3,
+      "failed": 0,
+      "tests": [
+        {
+          "name": "AI Navigation with Direct X-Obstruction (Bypasses via Y)",
+          "status": "PASS"
+        },
+        {
+          "name": "Trapped / Fully Blocked Units AI Behavior (No Crash / No Illegal Move)",
+          "status": "PASS"
+        },
+        {
+          "name": "Zero Living Players / Zero Living Enemies Graceful Handling",
+          "status": "PASS"
+        }
+      ]
+    },
+    "Fuzzing & Invariants": {
+      "passed": 1,
+      "failed": 0,
+      "tests": [
+        {
+          "name": "10,000 Action Invariant Stress Harness",
+          "status": "PASS"
+        }
+      ]
+    }
+  },
+  "fuzzStats": {
+    "totalActions": 10000,
+    "elapsedMs": 1313,
+    "opsPerSec": 7616,
+    "moveActions": 3493,
+    "shootActions": 2994,
+    "endTurnActions": 2025,
+    "invalidActions": 1488,
+    "matchesCompleted": 218
+  },
+  "vulnerabilities": [],
+  "failures": [],
+  "verdict": "APPROVE"
+}

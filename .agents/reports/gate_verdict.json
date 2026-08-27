@@ -1,0 +1,107 @@
+{
+  "gate": "AC_TACTICAL_WEB_GAME_STATIC",
+  "timestamp": "2026-08-27T01:44:27.438Z",
+  "executionMode": "pure_static_serverless",
+  "verdict": "PASS",
+  "summary": {
+    "totalSuites": 10,
+    "passedSuites": 10,
+    "failedSuites": 0,
+    "durationMs": 17421
+  },
+  "acceptanceCriteria": {
+    "assetCheck": {
+      "status": "PASS",
+      "assetsFound": 6,
+      "allTransparent": true,
+      "allHighRes": true,
+      "allNonPixelArt": true,
+      "reportRef": ".agents/reports/asset_validation_report.json"
+    },
+    "domAndNetworkIntegrity": {
+      "status": "PASS",
+      "unitsSpawned": 6,
+      "networkErrors": 0,
+      "apiRequests": 0,
+      "zeroApiRequests": true,
+      "consoleErrors": 0,
+      "reportRef": ".agents/reports/dom_network_report.json"
+    },
+    "layoutValidation": {
+      "status": "PASS",
+      "unitOverlapErrors": 0,
+      "zDepthConforms": true,
+      "gridPanelClippingErrors": 0,
+      "reportRef": ".agents/reports/layout_report.json"
+    }
+  },
+  "tierResults": {
+    "tier1_featureCoverage": "PASS",
+    "tier2_boundaryCorner": "PASS",
+    "tier3_crossFeature": "PASS",
+    "tier4_realWorldScenarios": "PASS",
+    "tier5_adversarialEmpirical": "PASS"
+  },
+  "suites": [
+    {
+      "name": "Asset Non-Pixel-Art Validator",
+      "passed": true,
+      "durationMs": 138,
+      "exitCode": 0
+    },
+    {
+      "name": "DOM & Network Integrity (Headless Chrome)",
+      "passed": true,
+      "durationMs": 4847,
+      "exitCode": 0
+    },
+    {
+      "name": "Isometric Layout & Non-Clipping (Headless Chrome)",
+      "passed": true,
+      "durationMs": 4035,
+      "exitCode": 0
+    },
+    {
+      "name": "Tier 1: Feature Coverage (F1-F12)",
+      "passed": true,
+      "durationMs": 396,
+      "exitCode": 0
+    },
+    {
+      "name": "Tier 2: Boundary & Corner Cases",
+      "passed": true,
+      "durationMs": 347,
+      "exitCode": 0
+    },
+    {
+      "name": "Tier 3: Pairwise Combinations",
+      "passed": true,
+      "durationMs": 418,
+      "exitCode": 0
+    },
+    {
+      "name": "Tier 4: Realistic Combat Scenarios",
+      "passed": true,
+      "durationMs": 240,
+      "exitCode": 0
+    },
+    {
+      "name": "Tier 5: Adversarial Empirical Challenge (M2 & M4)",
+      "passed": true,
+      "durationMs": 4832,
+      "exitCode": 0
+    },
+    {
+      "name": "Legacy In-Memory Regression Tests",
+      "passed": true,
+      "durationMs": 214,
+      "exitCode": 0
+    },
+    {
+      "name": "In-Memory State Fuzz Tests (10,000 ops)",
+      "passed": true,
+      "durationMs": 1954,
+      "exitCode": 0
+    }
+  ]
+}

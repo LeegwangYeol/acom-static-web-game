@@ -1,0 +1,1120 @@
+{
+  "timestamp": "2026-08-26T13:52:00.770Z",
+  "verdict": "PASS",
+  "totalAssetsChecked": 24,
+  "byteLevelPass": true,
+  "browserPass": true,
+  "assetDetails": {
+    "ally_assault.png": {
+      "exists": true,
+      "valid": true,
+      "sizeBytes": 8010,
+      "width": 192,
+      "height": 256,
+      "aspectRatio": 0.75,
+      "transRatio": 0.6028238932291666,
+      "opaqueRatio": 0.3795979817708333,
+      "semiAlphaCount": 864,
+      "uniqueColors": 252,
+      "sha256": "b89c1b41ec1fd043d542749e1966100787d3b31f5b593c7075b9aa2922a72281",
+      "boundingBox": {
+        "minX": 29,
+        "maxX": 162,
+        "minY": 44,
+        "maxY": 255,
+        "subjectWidth": 134,
+        "subjectHeight": 212
+      },
+      "centering": {
+        "visualCenterX": 95.5,
+        "visualCenterOffset": -0.5,
+        "bottomGap": 0
+      },
+      "checks": {
+        "is192x256": true,
+        "is3x4Ratio": true,
+        "hasAntiAliasing": true,
+        "hasTransparency": true,
+        "hasSufficientSubject": true,
+        "hasRichColors": true,
+        "isHashUnique": true
+      },
+      "passed": true
+    },
+    "ally_assault_attack.png": {
+      "exists": true,
+      "valid": true,
+      "sizeBytes": 8173,
+      "width": 192,
+      "height": 256,
+      "aspectRatio": 0.75,
+      "transRatio": 0.614501953125,
+      "opaqueRatio": 0.36676025390625,
+      "semiAlphaCount": 921,
+      "uniqueColors": 251,
+      "sha256": "17839cf5ffe9a77904f3d6d13499873377b2e376ea6f290999fb9b2dafe47e18",
+      "boundingBox": {
+        "minX": 13,
+        "maxX": 182,
+        "minY": 49,
+        "maxY": 255,
+        "subjectWidth": 170,
+        "subjectHeight": 207
+      },
+      "centering": {
+        "visualCenterX": 97.5,
+        "visualCenterOffset": 1.5,
+        "bottomGap": 0
+      },
+      "checks": {
+        "is192x256": true,
+        "is3x4Ratio": true,
+        "hasAntiAliasing": true,
+        "hasTransparency": true,
+        "hasSufficientSubject": true,
+        "hasRichColors": true,
+        "isHashUnique": true
+      },
+      "passed": true
+    },
+    "ally_assault_hit.png": {
+      "exists": true,
+      "valid": true,
+      "sizeBytes": 8027,
+      "width": 192,
+      "height": 256,
+      "aspectRatio": 0.75,
+      "transRatio": 0.6211344401041666,
+      "opaqueRatio": 0.3592936197916667,
+      "semiAlphaCount": 962,
+      "uniqueColors": 249,
+      "sha256": "9ecc592153b144cd14c48a42a50d0ad2f80d5a39150fb61cb02048c9b8ddb203",
+      "boundingBox": {
+        "minX": 1,
+        "maxX": 190,
+        "minY": 46,
+        "maxY": 250,
+        "subjectWidth": 190,
+        "subjectHeight": 205
+      },
+      "centering": {
+        "visualCenterX": 95.5,
+        "visualCenterOffset": -0.5,
+        "bottomGap": 5
+      },
+      "checks": {
+        "is192x256": true,
+        "is3x4Ratio": true,
+        "hasAntiAliasing": true,
+        "hasTransparency": true,
+        "hasSufficientSubject": true,
+        "hasRichColors": true,
+        "isHashUnique": true
+      },
+      "passed": true
+    },
+    "ally_assault_dead.png": {
+      "exists": true,
+      "valid": true,
+      "sizeBytes": 7656,
+      "width": 192,
+      "height": 256,
+      "aspectRatio": 0.75,
+      "transRatio": 0.6445109049479166,
+      "opaqueRatio": 0.33746337890625,
+      "semiAlphaCount": 886,
+      "uniqueColors": 251,
+      "sha256": "7e6a795e771e32e99b5fd9e3810032274320b3ccfd571a90261bc2693dbaca88",
+      "boundingBox": {
+        "minX": 1,
+        "maxX": 189,
+        "minY": 39,
+        "maxY": 214,
+        "subjectWidth": 189,
+        "subjectHeight": 176
+      },
+      "centering": {
+        "visualCenterX": 95,
+        "visualCenterOffset": -1,
+        "bottomGap": 41
+      },
+      "checks": {
+        "is192x256": true,
+        "is3x4Ratio": true,
+        "hasAntiAliasing": true,
+        "hasTransparency": true,
+        "hasSufficientSubject": true,
+        "hasRichColors": true,
+        "isHashUnique": true
+      },
+      "passed": true
+    },
+    "ally_recon.png": {
+      "exists": true,
+      "valid": true,
+      "sizeBytes": 7948,
+      "width": 192,
+      "height": 256,
+      "aspectRatio": 0.75,
+      "transRatio": 0.6416829427083334,
+      "opaqueRatio": 0.3434855143229167,
+      "semiAlphaCount": 729,
+      "uniqueColors": 251,
+      "sha256": "ea2d020b168a5d6d02d66cccd375956db7854b386ee6e153d034cc0b00dff635",
+      "boundingBox": {
+        "minX": 32,
+        "maxX": 159,
+        "minY": 65,
+        "maxY": 255,
+        "subjectWidth": 128,
+        "subjectHeight": 191
+      },
+      "centering": {
+        "visualCenterX": 95.5,
+        "visualCenterOffset": -0.5,
+        "bottomGap": 0
+      },
+      "checks": {
+        "is192x256": true,
+        "is3x4Ratio": true,
+        "hasAntiAliasing": true,
+        "hasTransparency": true,
+        "hasSufficientSubject": true,
+        "hasRichColors": true,
+        "isHashUnique": true
+      },
+      "passed": true
+    },
+    "ally_recon_attack.png": {
+      "exists": true,
+      "valid": true,
+      "sizeBytes": 8169,
+      "width": 192,
+      "height": 256,
+      "aspectRatio": 0.75,
+      "transRatio": 0.6452840169270834,
+      "opaqueRatio": 0.3377888997395833,
+      "semiAlphaCount": 832,
+      "uniqueColors": 254,
+      "sha256": "1cd4effae1f446d16fdde13130d0b0911cfabf1fd7aadf31567abb282791f1cf",
+      "boundingBox": {
+        "minX": 17,
+        "maxX": 182,
+        "minY": 66,
+        "maxY": 255,
+        "subjectWidth": 166,
+        "subjectHeight": 190
+      },
+      "centering": {
+        "visualCenterX": 99.5,
+        "visualCenterOffset": 3.5,
+        "bottomGap": 0
+      },
+      "checks": {
+        "is192x256": true,
+        "is3x4Ratio": true,
+        "hasAntiAliasing": true,
+        "hasTransparency": true,
+        "hasSufficientSubject": true,
+        "hasRichColors": true,
+        "isHashUnique": true
+      },
+      "passed": true
+    },
+    "ally_recon_hit.png": {
+      "exists": true,
+      "valid": true,
+      "sizeBytes": 7925,
+      "width": 192,
+      "height": 256,
+      "aspectRatio": 0.75,
+      "transRatio": 0.6566975911458334,
+      "opaqueRatio": 0.3260904947916667,
+      "semiAlphaCount": 846,
+      "uniqueColors": 255,
+      "sha256": "29b9454bd4d7747ab13436317e4a54635a35a18f3f8124fe7b72344d93a91e26",
+      "boundingBox": {
+        "minX": 1,
+        "maxX": 190,
+        "minY": 66,
+        "maxY": 247,
+        "subjectWidth": 190,
+        "subjectHeight": 182
+      },
+      "centering": {
+        "visualCenterX": 95.5,
+        "visualCenterOffset": -0.5,
+        "bottomGap": 8
+      },
+      "checks": {
+        "is192x256": true,
+        "is3x4Ratio": true,
+        "hasAntiAliasing": true,
+        "hasTransparency": true,
+        "hasSufficientSubject": true,
+        "hasRichColors": true,
+        "isHashUnique": true
+      },
+      "passed": true
+    },
+    "ally_recon_dead.png": {
+      "exists": true,
+      "valid": true,
+      "sizeBytes": 8243,
+      "width": 192,
+      "height": 256,
+      "aspectRatio": 0.75,
+      "transRatio": 0.6383260091145834,
+      "opaqueRatio": 0.343017578125,
+      "semiAlphaCount": 917,
+      "uniqueColors": 255,
+      "sha256": "0d8e825daf3a0bf0320eac4a844bb3275a541c6b3a6172ea1fe084e27278db26",
+      "boundingBox": {
+        "minX": 1,
+        "maxX": 187,
+        "minY": 40,
+        "maxY": 237,
+        "subjectWidth": 187,
+        "subjectHeight": 198
+      },
+      "centering": {
+        "visualCenterX": 94,
+        "visualCenterOffset": -2,
+        "bottomGap": 18
+      },
+      "checks": {
+        "is192x256": true,
+        "is3x4Ratio": true,
+        "hasAntiAliasing": true,
+        "hasTransparency": true,
+        "hasSufficientSubject": true,
+        "hasRichColors": true,
+        "isHashUnique": true
+      },
+      "passed": true
+    },
+    "ally_heavy.png": {
+      "exists": true,
+      "valid": true,
+      "sizeBytes": 8339,
+      "width": 192,
+      "height": 256,
+      "aspectRatio": 0.75,
+      "transRatio": 0.6658121744791666,
+      "opaqueRatio": 0.3162638346354167,
+      "semiAlphaCount": 881,
+      "uniqueColors": 249,
+      "sha256": "7858549240f335a7c9e2a23380298f99d1805ed3b9c478df02f9c8c8870943ba",
+      "boundingBox": {
+        "minX": 31,
+        "maxX": 160,
+        "minY": 74,
+        "maxY": 255,
+        "subjectWidth": 130,
+        "subjectHeight": 182
+      },
+      "centering": {
+        "visualCenterX": 95.5,
+        "visualCenterOffset": -0.5,
+        "bottomGap": 0
+      },
+      "checks": {
+        "is192x256": true,
+        "is3x4Ratio": true,
+        "hasAntiAliasing": true,
+        "hasTransparency": true,
+        "hasSufficientSubject": true,
+        "hasRichColors": true,
+        "isHashUnique": true
+      },
+      "passed": true
+    },
+    "ally_heavy_attack.png": {
+      "exists": true,
+      "valid": true,
+      "sizeBytes": 8360,
+      "width": 192,
+      "height": 256,
+      "aspectRatio": 0.75,
+      "transRatio": 0.6772054036458334,
+      "opaqueRatio": 0.30426025390625,
+      "semiAlphaCount": 911,
+      "uniqueColors": 253,
+      "sha256": "7cb1e55945257146c13ce914c17328dfd780542755d9421137f69cad4fbfaec6",
+      "boundingBox": {
+        "minX": 15,
+        "maxX": 184,
+        "minY": 76,
+        "maxY": 255,
+        "subjectWidth": 170,
+        "subjectHeight": 180
+      },
+      "centering": {
+        "visualCenterX": 99.5,
+        "visualCenterOffset": 3.5,
+        "bottomGap": 0
+      },
+      "checks": {
+        "is192x256": true,
+        "is3x4Ratio": true,
+        "hasAntiAliasing": true,
+        "hasTransparency": true,
+        "hasSufficientSubject": true,
+        "hasRichColors": true,
+        "isHashUnique": true
+      },
+      "passed": true
+    },
+    "ally_heavy_hit.png": {
+      "exists": true,
+      "valid": true,
+      "sizeBytes": 8348,
+      "width": 192,
+      "height": 256,
+      "aspectRatio": 0.75,
+      "transRatio": 0.6852620442708334,
+      "opaqueRatio": 0.2967529296875,
+      "semiAlphaCount": 884,
+      "uniqueColors": 251,
+      "sha256": "d69152893c81b98fa76aa60adbc24431997bb9e3ab3a95392cdd961dabacb252",
+      "boundingBox": {
+        "minX": 0,
+        "maxX": 188,
+        "minY": 77,
+        "maxY": 250,
+        "subjectWidth": 189,
+        "subjectHeight": 174
+      },
+      "centering": {
+        "visualCenterX": 94,
+        "visualCenterOffset": -2,
+        "bottomGap": 5
+      },
+      "checks": {
+        "is192x256": true,
+        "is3x4Ratio": true,
+        "hasAntiAliasing": true,
+        "hasTransparency": true,
+        "hasSufficientSubject": true,
+        "hasRichColors": true,
+        "isHashUnique": true
+      },
+      "passed": true
+    },
+    "ally_heavy_dead.png": {
+      "exists": true,
+      "valid": true,
+      "sizeBytes": 8499,
+      "width": 192,
+      "height": 256,
+      "aspectRatio": 0.75,
+      "transRatio": 0.6792399088541666,
+      "opaqueRatio": 0.301025390625,
+      "semiAlphaCount": 970,
+      "uniqueColors": 253,
+      "sha256": "0372cd14208b2a67286627295aefc7980f1a885a700dc9580f21ee4417c50092",
+      "boundingBox": {
+        "minX": 0,
+        "maxX": 189,
+        "minY": 39,
+        "maxY": 214,
+        "subjectWidth": 190,
+        "subjectHeight": 176
+      },
+      "centering": {
+        "visualCenterX": 94.5,
+        "visualCenterOffset": -1.5,
+        "bottomGap": 41
+      },
+      "checks": {
+        "is192x256": true,
+        "is3x4Ratio": true,
+        "hasAntiAliasing": true,
+        "hasTransparency": true,
+        "hasSufficientSubject": true,
+        "hasRichColors": true,
+        "isHashUnique": true
+      },
+      "passed": true
+    },
+    "enemy_mutant.png": {
+      "exists": true,
+      "valid": true,
+      "sizeBytes": 8519,
+      "width": 192,
+      "height": 256,
+      "aspectRatio": 0.75,
+      "transRatio": 0.6100667317708334,
+      "opaqueRatio": 0.3726399739583333,
+      "semiAlphaCount": 850,
+      "uniqueColors": 254,
+      "sha256": "67e6fb5780f7ec4781689f971931534a906ecd3712c2109692c3df83407b976d",
+      "boundingBox": {
+        "minX": 29,
+        "maxX": 162,
+        "minY": 52,
+        "maxY": 255,
+        "subjectWidth": 134,
+        "subjectHeight": 204
+      },
+      "centering": {
+        "visualCenterX": 95.5,
+        "visualCenterOffset": -0.5,
+        "bottomGap": 0
+      },
+      "checks": {
+        "is192x256": true,
+        "is3x4Ratio": true,
+        "hasAntiAliasing": true,
+        "hasTransparency": true,
+        "hasSufficientSubject": true,
+        "hasRichColors": true,
+        "isHashUnique": true
+      },
+      "passed": true
+    },
+    "enemy_mutant_attack.png": {
+      "exists": true,
+      "valid": true,
+      "sizeBytes": 8310,
+      "width": 192,
+      "height": 256,
+      "aspectRatio": 0.75,
+      "transRatio": 0.622802734375,
+      "opaqueRatio": 0.359375,
+      "semiAlphaCount": 876,
+      "uniqueColors": 249,
+      "sha256": "22493541a0069885da95eb1ab9d7d04a0f0bcce162a7d7e32e9621c4409bec9a",
+      "boundingBox": {
+        "minX": 13,
+        "maxX": 182,
+        "minY": 55,
+        "maxY": 255,
+        "subjectWidth": 170,
+        "subjectHeight": 201
+      },
+      "centering": {
+        "visualCenterX": 97.5,
+        "visualCenterOffset": 1.5,
+        "bottomGap": 0
+      },
+      "checks": {
+        "is192x256": true,
+        "is3x4Ratio": true,
+        "hasAntiAliasing": true,
+        "hasTransparency": true,
+        "hasSufficientSubject": true,
+        "hasRichColors": true,
+        "isHashUnique": true
+      },
+      "passed": true
+    },
+    "enemy_mutant_hit.png": {
+      "exists": true,
+      "valid": true,
+      "sizeBytes": 8394,
+      "width": 192,
+      "height": 256,
+      "aspectRatio": 0.75,
+      "transRatio": 0.6290283203125,
+      "opaqueRatio": 0.3524576822916667,
+      "semiAlphaCount": 910,
+      "uniqueColors": 253,
+      "sha256": "1ea76067cf7fe18ec7975eb048d0c137095e165e2e2f923fbedca31f6acdb0e6",
+      "boundingBox": {
+        "minX": 1,
+        "maxX": 190,
+        "minY": 55,
+        "maxY": 250,
+        "subjectWidth": 190,
+        "subjectHeight": 196
+      },
+      "centering": {
+        "visualCenterX": 95.5,
+        "visualCenterOffset": -0.5,
+        "bottomGap": 5
+      },
+      "checks": {
+        "is192x256": true,
+        "is3x4Ratio": true,
+        "hasAntiAliasing": true,
+        "hasTransparency": true,
+        "hasSufficientSubject": true,
+        "hasRichColors": true,
+        "isHashUnique": true
+      },
+      "passed": true
+    },
+    "enemy_mutant_dead.png": {
+      "exists": true,
+      "valid": true,
+      "sizeBytes": 7752,
+      "width": 192,
+      "height": 256,
+      "aspectRatio": 0.75,
+      "transRatio": 0.6574503580729166,
+      "opaqueRatio": 0.3254597981770833,
+      "semiAlphaCount": 840,
+      "uniqueColors": 251,
+      "sha256": "d2a61b75e6c3e4624b7725f5fb0af51cf4ebc3a3bc20b90c0c40712d921f2912",
+      "boundingBox": {
+        "minX": 1,
+        "maxX": 189,
+        "minY": 39,
+        "maxY": 214,
+        "subjectWidth": 189,
+        "subjectHeight": 176
+      },
+      "centering": {
+        "visualCenterX": 95,
+        "visualCenterOffset": -1,
+        "bottomGap": 41
+      },
+      "checks": {
+        "is192x256": true,
+        "is3x4Ratio": true,
+        "hasAntiAliasing": true,
+        "hasTransparency": true,
+        "hasSufficientSubject": true,
+        "hasRichColors": true,
+        "isHashUnique": true
+      },
+      "passed": true
+    },
+    "enemy_scout.png": {
+      "exists": true,
+      "valid": true,
+      "sizeBytes": 7891,
+      "width": 192,
+      "height": 256,
+      "aspectRatio": 0.75,
+      "transRatio": 0.6360880533854166,
+      "opaqueRatio": 0.3462117513020833,
+      "semiAlphaCount": 870,
+      "uniqueColors": 255,
+      "sha256": "9d730e78cfd4a065e613115b55d3c0135e4de3c8993e261230fef18bbbdbc480",
+      "boundingBox": {
+        "minX": 32,
+        "maxX": 159,
+        "minY": 64,
+        "maxY": 255,
+        "subjectWidth": 128,
+        "subjectHeight": 192
+      },
+      "centering": {
+        "visualCenterX": 95.5,
+        "visualCenterOffset": -0.5,
+        "bottomGap": 0
+      },
+      "checks": {
+        "is192x256": true,
+        "is3x4Ratio": true,
+        "hasAntiAliasing": true,
+        "hasTransparency": true,
+        "hasSufficientSubject": true,
+        "hasRichColors": true,
+        "isHashUnique": true
+      },
+      "passed": true
+    },
+    "enemy_scout_attack.png": {
+      "exists": true,
+      "valid": true,
+      "sizeBytes": 7949,
+      "width": 192,
+      "height": 256,
+      "aspectRatio": 0.75,
+      "transRatio": 0.64288330078125,
+      "opaqueRatio": 0.3383382161458333,
+      "semiAlphaCount": 923,
+      "uniqueColors": 254,
+      "sha256": "79625ff29b3e78246a9d15d9312b869ccf5ad93e3d859a3e3e041b9636e72860",
+      "boundingBox": {
+        "minX": 17,
+        "maxX": 182,
+        "minY": 66,
+        "maxY": 255,
+        "subjectWidth": 166,
+        "subjectHeight": 190
+      },
+      "centering": {
+        "visualCenterX": 99.5,
+        "visualCenterOffset": 3.5,
+        "bottomGap": 0
+      },
+      "checks": {
+        "is192x256": true,
+        "is3x4Ratio": true,
+        "hasAntiAliasing": true,
+        "hasTransparency": true,
+        "hasSufficientSubject": true,
+        "hasRichColors": true,
+        "isHashUnique": true
+      },
+      "passed": true
+    },
+    "enemy_scout_hit.png": {
+      "exists": true,
+      "valid": true,
+      "sizeBytes": 7881,
+      "width": 192,
+      "height": 256,
+      "aspectRatio": 0.75,
+      "transRatio": 0.6565755208333334,
+      "opaqueRatio": 0.32501220703125,
+      "semiAlphaCount": 905,
+      "uniqueColors": 252,
+      "sha256": "03a9dd1e72762c4af3a9d309d20277de106162d0f45203da14df6bf45bcacab1",
+      "boundingBox": {
+        "minX": 1,
+        "maxX": 190,
+        "minY": 67,
+        "maxY": 247,
+        "subjectWidth": 190,
+        "subjectHeight": 181
+      },
+      "centering": {
+        "visualCenterX": 95.5,
+        "visualCenterOffset": -0.5,
+        "bottomGap": 8
+      },
+      "checks": {
+        "is192x256": true,
+        "is3x4Ratio": true,
+        "hasAntiAliasing": true,
+        "hasTransparency": true,
+        "hasSufficientSubject": true,
+        "hasRichColors": true,
+        "isHashUnique": true
+      },
+      "passed": true
+    },
+    "enemy_scout_dead.png": {
+      "exists": true,
+      "valid": true,
+      "sizeBytes": 7579,
+      "width": 192,
+      "height": 256,
+      "aspectRatio": 0.75,
+      "transRatio": 0.6822509765625,
+      "opaqueRatio": 0.29876708984375,
+      "semiAlphaCount": 933,
+      "uniqueColors": 252,
+      "sha256": "c82ef0c9ce9ede8c8b87a2374b1b5697a66c1709955dde8c95ecd3941d55e04b",
+      "boundingBox": {
+        "minX": 1,
+        "maxX": 187,
+        "minY": 40,
+        "maxY": 209,
+        "subjectWidth": 187,
+        "subjectHeight": 170
+      },
+      "centering": {
+        "visualCenterX": 94,
+        "visualCenterOffset": -2,
+        "bottomGap": 46
+      },
+      "checks": {
+        "is192x256": true,
+        "is3x4Ratio": true,
+        "hasAntiAliasing": true,
+        "hasTransparency": true,
+        "hasSufficientSubject": true,
+        "hasRichColors": true,
+        "isHashUnique": true
+      },
+      "passed": true
+    },
+    "enemy_heavy.png": {
+      "exists": true,
+      "valid": true,
+      "sizeBytes": 7618,
+      "width": 192,
+      "height": 256,
+      "aspectRatio": 0.75,
+      "transRatio": 0.6164347330729166,
+      "opaqueRatio": 0.3669026692708333,
+      "semiAlphaCount": 819,
+      "uniqueColors": 254,
+      "sha256": "291c5c37e85491e50efa58ec5f11ca93f9e36c48a54e7d32b202d69954a3b67a",
+      "boundingBox": {
+        "minX": 29,
+        "maxX": 162,
+        "minY": 68,
+        "maxY": 255,
+        "subjectWidth": 134,
+        "subjectHeight": 188
+      },
+      "centering": {
+        "visualCenterX": 95.5,
+        "visualCenterOffset": -0.5,
+        "bottomGap": 0
+      },
+      "checks": {
+        "is192x256": true,
+        "is3x4Ratio": true,
+        "hasAntiAliasing": true,
+        "hasTransparency": true,
+        "hasSufficientSubject": true,
+        "hasRichColors": true,
+        "isHashUnique": true
+      },
+      "passed": true
+    },
+    "enemy_heavy_attack.png": {
+      "exists": true,
+      "valid": true,
+      "sizeBytes": 7624,
+      "width": 192,
+      "height": 256,
+      "aspectRatio": 0.75,
+      "transRatio": 0.6293131510416666,
+      "opaqueRatio": 0.35394287109375,
+      "semiAlphaCount": 823,
+      "uniqueColors": 253,
+      "sha256": "80e09f1c849253f3044912ed4b796bf87d48a7c43a47cf5251491106c9d5e38e",
+      "boundingBox": {
+        "minX": 13,
+        "maxX": 182,
+        "minY": 70,
+        "maxY": 255,
+        "subjectWidth": 170,
+        "subjectHeight": 186
+      },
+      "centering": {
+        "visualCenterX": 97.5,
+        "visualCenterOffset": 1.5,
+        "bottomGap": 0
+      },
+      "checks": {
+        "is192x256": true,
+        "is3x4Ratio": true,
+        "hasAntiAliasing": true,
+        "hasTransparency": true,
+        "hasSufficientSubject": true,
+        "hasRichColors": true,
+        "isHashUnique": true
+      },
+      "passed": true
+    },
+    "enemy_heavy_hit.png": {
+      "exists": true,
+      "valid": true,
+      "sizeBytes": 7778,
+      "width": 192,
+      "height": 256,
+      "aspectRatio": 0.75,
+      "transRatio": 0.6349283854166666,
+      "opaqueRatio": 0.3467610677083333,
+      "semiAlphaCount": 900,
+      "uniqueColors": 251,
+      "sha256": "808b4dfa01fe4b1f078c87c6bb2014b5dde716a56ff232627f0cf7f6e24764d1",
+      "boundingBox": {
+        "minX": 1,
+        "maxX": 190,
+        "minY": 71,
+        "maxY": 250,
+        "subjectWidth": 190,
+        "subjectHeight": 180
+      },
+      "centering": {
+        "visualCenterX": 95.5,
+        "visualCenterOffset": -0.5,
+        "bottomGap": 5
+      },
+      "checks": {
+        "is192x256": true,
+        "is3x4Ratio": true,
+        "hasAntiAliasing": true,
+        "hasTransparency": true,
+        "hasSufficientSubject": true,
+        "hasRichColors": true,
+        "isHashUnique": true
+      },
+      "passed": true
+    },
+    "enemy_heavy_dead.png": {
+      "exists": true,
+      "valid": true,
+      "sizeBytes": 7562,
+      "width": 192,
+      "height": 256,
+      "aspectRatio": 0.75,
+      "transRatio": 0.660400390625,
+      "opaqueRatio": 0.3232625325520833,
+      "semiAlphaCount": 803,
+      "uniqueColors": 248,
+      "sha256": "2c9da52d0c7ada7efa5a50dccd8590dc9eff353ab4e3b479debb017d6ac4fe93",
+      "boundingBox": {
+        "minX": 1,
+        "maxX": 189,
+        "minY": 39,
+        "maxY": 214,
+        "subjectWidth": 189,
+        "subjectHeight": 176
+      },
+      "centering": {
+        "visualCenterX": 95,
+        "visualCenterOffset": -1,
+        "bottomGap": 41
+      },
+      "checks": {
+        "is192x256": true,
+        "is3x4Ratio": true,
+        "hasAntiAliasing": true,
+        "hasTransparency": true,
+        "hasSufficientSubject": true,
+        "hasRichColors": true,
+        "isHashUnique": true
+      },
+      "passed": true
+    }
+  },
+  "archetypeSummary": {
+    "ally_assault": {
+      "standingMaxCenterSpread": 2,
+      "standingMaxBottomGapSpread": 5,
+      "idleBottomGap": 0,
+      "deadSubjectHeight": 176,
+      "idleSubjectHeight": 212
+    },
+    "ally_recon": {
+      "standingMaxCenterSpread": 4,
+      "standingMaxBottomGapSpread": 8,
+      "idleBottomGap": 0,
+      "deadSubjectHeight": 198,
+      "idleSubjectHeight": 191
+    },
+    "ally_heavy": {
+      "standingMaxCenterSpread": 5.5,
+      "standingMaxBottomGapSpread": 5,
+      "idleBottomGap": 0,
+      "deadSubjectHeight": 176,
+      "idleSubjectHeight": 182
+    },
+    "enemy_mutant": {
+      "standingMaxCenterSpread": 2,
+      "standingMaxBottomGapSpread": 5,
+      "idleBottomGap": 0,
+      "deadSubjectHeight": 176,
+      "idleSubjectHeight": 204
+    },
+    "enemy_scout": {
+      "standingMaxCenterSpread": 4,
+      "standingMaxBottomGapSpread": 8,
+      "idleBottomGap": 0,
+      "deadSubjectHeight": 170,
+      "idleSubjectHeight": 192
+    },
+    "enemy_heavy": {
+      "standingMaxCenterSpread": 2,
+      "standingMaxBottomGapSpread": 5,
+      "idleBottomGap": 0,
+      "deadSubjectHeight": 176,
+      "idleSubjectHeight": 188
+    }
+  },
+  "browserTestResult": {
+    "network404s": [],
+    "consoleErrors": [],
+    "browserResults": {
+      "loaded": [
+        "ally_assault.png",
+        "ally_assault_attack.png",
+        "ally_assault_hit.png",
+        "ally_assault_dead.png",
+        "ally_recon.png",
+        "ally_recon_attack.png",
+        "ally_recon_hit.png",
+        "ally_recon_dead.png",
+        "ally_heavy.png",
+        "ally_heavy_attack.png",
+        "ally_heavy_hit.png",
+        "ally_heavy_dead.png",
+        "enemy_mutant.png",
+        "enemy_mutant_attack.png",
+        "enemy_mutant_hit.png",
+        "enemy_mutant_dead.png",
+        "enemy_scout.png",
+        "enemy_scout_attack.png",
+        "enemy_scout_hit.png",
+        "enemy_scout_dead.png",
+        "enemy_heavy.png",
+        "enemy_heavy_attack.png",
+        "enemy_heavy_hit.png",
+        "enemy_heavy_dead.png"
+      ],
+      "errors": [],
+      "decoded": [
+        {
+          "asset": "ally_assault.png",
+          "width": 192,
+          "height": 256,
+          "aspectRatio": "0.7500",
+          "complete": true
+        },
+        {
+          "asset": "ally_assault_attack.png",
+          "width": 192,
+          "height": 256,
+          "aspectRatio": "0.7500",
+          "complete": true
+        },
+        {
+          "asset": "ally_assault_hit.png",
+          "width": 192,
+          "height": 256,
+          "aspectRatio": "0.7500",
+          "complete": true
+        },
+        {
+          "asset": "ally_assault_dead.png",
+          "width": 192,
+          "height": 256,
+          "aspectRatio": "0.7500",
+          "complete": true
+        },
+        {
+          "asset": "ally_recon.png",
+          "width": 192,
+          "height": 256,
+          "aspectRatio": "0.7500",
+          "complete": true
+        },
+        {
+          "asset": "ally_recon_attack.png",
+          "width": 192,
+          "height": 256,
+          "aspectRatio": "0.7500",
+          "complete": true
+        },
+        {
+          "asset": "ally_recon_hit.png",
+          "width": 192,
+          "height": 256,
+          "aspectRatio": "0.7500",
+          "complete": true
+        },
+        {
+          "asset": "ally_recon_dead.png",
+          "width": 192,
+          "height": 256,
+          "aspectRatio": "0.7500",
+          "complete": true
+        },
+        {
+          "asset": "ally_heavy.png",
+          "width": 192,
+          "height": 256,
+          "aspectRatio": "0.7500",
+          "complete": true
+        },
+        {
+          "asset": "ally_heavy_attack.png",
+          "width": 192,
+          "height": 256,
+          "aspectRatio": "0.7500",
+          "complete": true
+        },
+        {
+          "asset": "ally_heavy_hit.png",
+          "width": 192,
+          "height": 256,
+          "aspectRatio": "0.7500",
+          "complete": true
+        },
+        {
+          "asset": "ally_heavy_dead.png",
+          "width": 192,
+          "height": 256,
+          "aspectRatio": "0.7500",
+          "complete": true
+        },
+        {
+          "asset": "enemy_mutant.png",
+          "width": 192,
+          "height": 256,
+          "aspectRatio": "0.7500",
+          "complete": true
+        },
+        {
+          "asset": "enemy_mutant_attack.png",
+          "width": 192,
+          "height": 256,
+          "aspectRatio": "0.7500",
+          "complete": true
+        },
+        {
+          "asset": "enemy_mutant_hit.png",
+          "width": 192,
+          "height": 256,
+          "aspectRatio": "0.7500",
+          "complete": true
+        },
+        {
+          "asset": "enemy_mutant_dead.png",
+          "width": 192,
+          "height": 256,
+          "aspectRatio": "0.7500",
+          "complete": true
+        },
+        {
+          "asset": "enemy_scout.png",
+          "width": 192,
+          "height": 256,
+          "aspectRatio": "0.7500",
+          "complete": true
+        },
+        {
+          "asset": "enemy_scout_attack.png",
+          "width": 192,
+          "height": 256,
+          "aspectRatio": "0.7500",
+          "complete": true
+        },
+        {
+          "asset": "enemy_scout_hit.png",
+          "width": 192,
+          "height": 256,
+          "aspectRatio": "0.7500",
+          "complete": true
+        },
+        {
+          "asset": "enemy_scout_dead.png",
+          "width": 192,
+          "height": 256,
+          "aspectRatio": "0.7500",
+          "complete": true
+        },
+        {
+          "asset": "enemy_heavy.png",
+          "width": 192,
+          "height": 256,
+          "aspectRatio": "0.7500",
+          "complete": true
+        },
+        {
+          "asset": "enemy_heavy_attack.png",
+          "width": 192,
+          "height": 256,
+          "aspectRatio": "0.7500",
+          "complete": true
+        },
+        {
+          "asset": "enemy_heavy_hit.png",
+          "width": 192,
+          "height": 256,
+          "aspectRatio": "0.7500",
+          "complete": true
+        },
+        {
+          "asset": "enemy_heavy_dead.png",
+          "width": 192,
+          "height": 256,
+          "aspectRatio": "0.7500",
+          "complete": true
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "timestamp": "2026-08-26T13:42:44.530Z",
+  "findings": [
+    {
+      "test": "T1_INITIAL_SPAWN",
+      "passed": true,
+      "details": "6 initial units correctly spawned in DOM."
+    },
+    {
+      "test": "T2_DOM_ORPHAN_LEAK",
+      "passed": false,
+      "details": "CRITICAL BUG: DOM retains orphaned .unit elements from previous game states. DOM count is 10 while server unit count is 6. Orphaned units cause collisions and ghost elements."
+    },
+    {
+      "test": "T3_DEPTH_SORTING",
+      "passed": true,
+      "details": "Dynamic Z-index formula strictly ensures foreground units (higher Y) have higher z-index than background units (lower Y)."
+    },
+    {
+      "test": "T4_ACTION_POSES_NETWORK",
+      "passed": true,
+      "details": "All 24 character asset variants (6 archetypes x 4 poses: base, attack, hit, dead) loaded successfully with zero 404 network errors."
+    },
+    {
+      "test": "T5_SPRITE_ANCHORING",
+      "passed": true,
+      "details": "Sprites positioned at bottom-center anchor (bottom: 8px, left: 50%, translateX(-50%)) with grounding drop shadows and image-rendering: auto."
+    }
+  ],
+  "networkErrors": [],
+  "consoleErrors": []
+}

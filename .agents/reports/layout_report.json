@@ -1,0 +1,145 @@
+{
+  "timestamp": "2026-08-27T01:44:19.015Z",
+  "gameUrl": "http://127.0.0.1:50544/index.html",
+  "mode": "static_serverless",
+  "status": "PASS",
+  "summary": {
+    "unitsCount": 6,
+    "duplicateCollisionsCount": 0,
+    "zDepthConforms": true,
+    "uiClipsGrid": false,
+    "containerFits": true
+  },
+  "geometry": {
+    "viewport": {
+      "width": 1440,
+      "height": 813
+    },
+    "container": {
+      "left": 127,
+      "top": 20,
+      "right": 1307,
+      "bottom": 1240,
+      "width": 1180,
+      "height": 1220
+    },
+    "grid": {
+      "left": 375.5019226074219,
+      "top": 293.7447814941406,
+      "right": 1058.4980163574219,
+      "bottom": 870.3192443847656,
+      "width": 682.99609375,
+      "height": 576.574462890625
+    },
+    "uiPanel": {
+      "left": 158,
+      "top": 890,
+      "right": 1276,
+      "bottom": 1209,
+      "width": 1118,
+      "height": 319
+    },
+    "squadDock": {
+      "left": 158,
+      "top": 135,
+      "right": 1276,
+      "bottom": 221,
+      "width": 1118,
+      "height": 86
+    }
+  },
+  "units": [
+    {
+      "id": "unit-ally_assault_1",
+      "className": "unit player ally_assault assault selected",
+      "leftStyle": "60px",
+      "topStyle": "60px",
+      "zIndex": 15,
+      "rect": {
+        "left": 490.8777160644531,
+        "top": 334.089599609375,
+        "right": 551.1801147460938,
+        "bottom": 382.4134826660156,
+        "width": 60.302398681640625,
+        "height": 48.323883056640625
+      }
+    },
+    {
+      "id": "unit-ally_recon_1",
+      "className": "unit player ally_recon recon",
+      "leftStyle": "0px",
+      "topStyle": "180px",
+      "zIndex": 35,
+      "rect": {
+        "left": 420.87548828125,
+        "top": 432.9869384765625,
+        "right": 485.6144714355469,
+        "bottom": 485.97076416015625,
+        "width": 64.73898315429688,
+        "height": 52.98382568359375
+      }
+    },
+    {
+      "id": "unit-ally_heavy_1",
+      "className": "unit player ally_heavy heavy",
+      "leftStyle": "180px",
+      "topStyle": "0px",
+      "zIndex": 5,
+      "rect": {
+        "left": 606.4534301757812,
+        "top": 287.86846923828125,
+        "right": 662.9292602539062,
+        "bottom": 334.089599609375,
+        "width": 56.475830078125,
+        "height": 46.22113037109375
+      }
+    },
+    {
+      "id": "unit-enemy_mutant_1",
+      "className": "unit enemy enemy_mutant mutant",
+      "leftStyle": "480px",
+      "topStyle": "480px",
+      "zIndex": 85,
+      "rect": {
+        "left": 913.3956909179688,
+        "top": 725.81982421875,
+        "right": 985.9454345703125,
+        "bottom": 793.893310546875,
+        "width": 72.54974365234375,
+        "height": 68.073486328125
+      }
+    },
+    {
+      "id": "unit-enemy_scout_1",
+      "className": "unit enemy enemy_scout infiltrator",
+      "leftStyle": "540px",
+      "topStyle": "300px",
+      "zIndex": 55,
+      "rect": {
+        "left": 959.6829223632812,
+        "top": 541.5415649414062,
+        "right": 1027.944580078125,
+        "bottom": 599.8934936523438,
+        "width": 68.26165771484375,
+        "height": 58.3519287109375
+      }
+    },
+    {
+      "id": "unit-enemy_heavy_1",
+      "className": "unit enemy enemy_heavy enforcer",
+      "leftStyle": "300px",
+      "topStyle": "540px",
+      "zIndex": 95,
+      "rect": {
+        "left": 717,
+        "top": 793.893310546875,
+        "right": 786.10595703125,
+        "bottom": 865.7525634765625,
+        "width": 69.10595703125,
+        "height": 71.8592529296875
+      }
+    }
+  ],
+  "collisions": [],
+  "clippingDetails": null
+}
