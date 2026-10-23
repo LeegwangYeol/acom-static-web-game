@@ -3,7 +3,7 @@ name: Jules Daily Check
 on:
   schedule:
     # INFO : GitHub evaluates cron in UTC, not KST
-    - cron: '53 20 * * *'
+    - cron: '53'
   workflow_dispatch:
 
 permissions:
@@ -31,7 +31,22 @@ jobs:
               answer you chose under "Assumptions" in the pull request body, then continue.
             - When several candidates qualify, any one is fine. Pick one and go;
               the next daily run picks up the others.
+            - Earlier daily runs may already be fixing something. Run `git fetch origin` and
+              `git branch -r` first; skip any issue that an existing fix branch already addresses.
             - If you cannot settle on a safe fix, finish without changes and without a pull request.
+
+            ## This repository
+            Static browser tactics game (`index.html`, `game.js`, `style.css`, `bot.js`) with an optional Express helper, `server.js` (archetypes, grid constants). `npm test` runs `tests/run_all_tests.js`, which drives the other node test files; most need no browser.
+
+            Setup and checks:
+            - `npm ci` (express and cors for `server.js`), `npm test`
+            - Some `tests/validate_*.js` and `challenger_*` scripts may expect a running server or `file://` access; a failure only for that reason is not a defect.
+
+            Focus:
+            - Turn and engine logic in `game.js` (cover values, pairwise interactions, boundary cases), decision logic in `bot.js`, input validation in `server.js`, asset paths (`assets/`, sprite files) that would 404.
+
+            Leave alone:
+            - `legacy_backup/`, `download.py`, the image files, `fuzz_test.js`, the planning `.md` files.
 
             ## Goal
             Find ONE real defect and fix it in a small, safe pull request.
@@ -67,6 +82,8 @@ jobs:
             - How it was verified (build/test command and result)
             - Not fixed (problems that need a decision), or "none"
             - Assumptions (questions you would have asked, with the answer you chose), or "none"
+            - Prompt feedback (instructions above that were wrong, missing or unclear for this
+              repository, e.g. a build command that does not exist), or "none"
 
             Reminder: do not ask questions. Decide, finish, and open the pull request or stop.
         run: |
