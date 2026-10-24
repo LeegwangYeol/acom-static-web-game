@@ -15,7 +15,7 @@ const net = require('net');
 
 const ROOT_DIR = path.resolve(__dirname, '..');
 const REPORT_PATH = path.resolve(__dirname, '../.agents/reports/dom_network_report.json');
-const CHROME_PATH = '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome';
+const CHROME_PATH = process.env.CHROME_PATH || (process.platform === 'darwin' ? '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome' : '/usr/bin/google-chrome');
 
 function getFreePort() {
     return new Promise((resolve, reject) => {
