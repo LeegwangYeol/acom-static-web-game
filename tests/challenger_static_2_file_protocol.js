@@ -11,7 +11,7 @@ const os = require('os');
 const net = require('net');
 
 const ROOT_DIR = path.resolve(__dirname, '..');
-const CHROME_PATH = '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome';
+const CHROME_PATH = process.env.CHROME_PATH || (process.platform === 'darwin' ? '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome' : '/usr/bin/google-chrome');
 const INDEX_HTML_FILE_URL = `file://${path.join(ROOT_DIR, 'index.html')}`;
 
 function getFreePort() {
@@ -54,6 +54,7 @@ async function runFileProtocolTest() {
             `--remote-debugging-port=${cdpPort}`,
             `--user-data-dir=${userDataDir}`,
             '--disable-gpu',
+            '--no-sandbox',
             '--no-first-run',
             '--no-default-browser-check',
             '--disable-extensions',

@@ -21,7 +21,7 @@ const net = require('net');
 
 const ROOT_DIR = path.resolve(__dirname, '..');
 const REPORT_PATH = path.resolve(__dirname, '../.agents/challenger_static_2/empirical_report.json');
-const CHROME_PATH = '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome';
+const CHROME_PATH = process.env.CHROME_PATH || (process.platform === 'darwin' ? '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome' : '/usr/bin/google-chrome');
 
 function getFreePort() {
     return new Promise((resolve, reject) => {
@@ -139,6 +139,7 @@ async function runEmpiricalStressTest() {
             `--remote-debugging-port=${cdpPort}`,
             `--user-data-dir=${userDataDir}`,
             '--disable-gpu',
+            '--no-sandbox',
             '--no-first-run',
             '--no-default-browser-check',
             '--disable-extensions',
