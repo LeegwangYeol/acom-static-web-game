@@ -15,7 +15,7 @@ const fs = require('fs');
 const os = require('os');
 const net = require('net');
 
-const CHROME_PATH = '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome';
+const CHROME_PATH = process.env.CHROME_PATH || (process.platform === 'darwin' ? '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome' : '/usr/bin/google-chrome');
 
 function getFreePort() {
     return new Promise((resolve, reject) => {
@@ -115,6 +115,7 @@ async function runEmpiricalChallenge() {
             `--remote-debugging-port=${cdpPort}`,
             `--user-data-dir=${userDataDir}`,
             '--disable-gpu',
+            '--no-sandbox',
             '--no-first-run',
             '--no-default-browser-check',
             '--disable-extensions',
