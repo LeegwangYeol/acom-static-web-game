@@ -14,7 +14,7 @@ const http = require('http');
 
 const ROOT_DIR = path.resolve(__dirname, '..');
 const REPORT_PATH = path.resolve(__dirname, '../.agents/reports/layout_report.json');
-const CHROME_PATH = '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome';
+const CHROME_PATH = process.env.CHROME_BIN || '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome';
 
 function getFreePort() {
     return new Promise((resolve, reject) => {
@@ -110,6 +110,7 @@ async function runLayoutValidation() {
         console.log(`Launching Headless Chrome on CDP port ${cdpPort}...`);
         chromeProc = spawn(CHROME_PATH, [
             '--headless=new',
+                '--no-sandbox',
             `--remote-debugging-port=${cdpPort}`,
             `--user-data-dir=${userDataDir}`,
             '--disable-gpu',
