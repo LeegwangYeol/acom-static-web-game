@@ -21,7 +21,7 @@ const net = require('net');
 const http = require('http');
 
 const ROOT_DIR = path.resolve(__dirname, '..');
-const CHROME_PATH = '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome';
+const CHROME_PATH = process.env.CHROME_BIN || '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome';
 
 let AcomEngine, createUnit, ARCHETYPES, calculateHitChance;
 try {
@@ -350,6 +350,7 @@ describe('Adversarial M4: Final E2E Verification & Tactical Hardening [Static In
         try {
             chromeProc = spawn(CHROME_PATH, [
                 '--headless=new',
+                '--no-sandbox',
                 `--remote-debugging-port=${cdpPort}`,
                 `--user-data-dir=${userDataDir}`,
                 '--disable-gpu',
