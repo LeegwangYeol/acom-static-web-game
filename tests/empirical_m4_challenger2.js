@@ -18,7 +18,7 @@ const zlib = require('zlib');
 const crypto = require('crypto');
 
 const REPORT_PATH = path.resolve(__dirname, '../.agents/reports/empirical_m4_challenge_report.json');
-const CHROME_PATH = '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome';
+const CHROME_PATH = process.env.CHROME_BIN || '/usr/bin/google-chrome';
 const ASSETS_DIR = path.resolve(__dirname, '../assets/characters');
 const APP_PORT = 3000;
 const API_BASE = `http://127.0.0.1:${APP_PORT}/api`;
@@ -271,6 +271,7 @@ async function verifyHeadlessChrome() {
     try {
         chromeProc = spawn(CHROME_PATH, [
             '--headless=new',
+            '--no-sandbox',
             `--remote-debugging-port=${cdpPort}`,
             `--user-data-dir=${userDataDir}`,
             '--disable-gpu',
