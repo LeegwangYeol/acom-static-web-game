@@ -21,7 +21,7 @@ const net = require('net');
 
 const ROOT_DIR = path.resolve(__dirname, '..');
 const REPORT_PATH = path.resolve(__dirname, '../.agents/challenger_static_2/empirical_report.json');
-const CHROME_PATH = '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome';
+const CHROME_PATH = process.env.CHROME_BIN || '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome';
 
 function getFreePort() {
     return new Promise((resolve, reject) => {
@@ -135,7 +135,7 @@ async function runEmpiricalStressTest() {
     try {
         console.log(`[INIT] Launching Headless Chrome with CDP debugging port ${cdpPort}...`);
         chromeProc = spawn(CHROME_PATH, [
-            '--headless=new',
+            '--headless=new', '--no-sandbox',
             `--remote-debugging-port=${cdpPort}`,
             `--user-data-dir=${userDataDir}`,
             '--disable-gpu',
