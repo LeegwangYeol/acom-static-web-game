@@ -15,7 +15,7 @@ const net = require('net');
 
 const ROOT_DIR = path.resolve(__dirname, '..');
 const REPORT_PATH = path.resolve(__dirname, '../.agents/reports/dom_network_report.json');
-const CHROME_PATH = '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome';
+const CHROME_PATH = process.env.CHROME_BIN || '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome';
 
 function getFreePort() {
     return new Promise((resolve, reject) => {
@@ -117,6 +117,7 @@ async function runDomNetworkValidation() {
         console.log(`Launching Headless Chrome on CDP port ${cdpPort}...`);
         chromeProc = spawn(CHROME_PATH, [
             '--headless=new',
+                '--no-sandbox',
             `--remote-debugging-port=${cdpPort}`,
             `--user-data-dir=${userDataDir}`,
             '--disable-gpu',
@@ -133,7 +134,7 @@ async function runDomNetworkValidation() {
             await sleep(100);
             try {
                 const list = await fetchJSON(`http://127.0.0.1:${cdpPort}/json/list`);
-                const pageTarget = list.find(t => t.type === 'page' && !t.url.startsWith('chrome-extension')) || list.find(t => t.type === 'page') || list[0];
+                const pageTarget = list.find(t => t.type === 'page' && !t.url.startsWith('chrome-extension') && t.url !== 'about:blank') || list.find(t => t.type === 'page' && !t.url.startsWith('chrome-extension')) || list.find(t => t.type === 'page') || list[0];
                 if (pageTarget && pageTarget.webSocketDebuggerUrl) {
                     debuggerUrl = pageTarget.webSocketDebuggerUrl;
                     break;

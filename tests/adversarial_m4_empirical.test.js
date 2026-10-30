@@ -21,7 +21,7 @@ const net = require('net');
 const http = require('http');
 
 const ROOT_DIR = path.resolve(__dirname, '..');
-const CHROME_PATH = '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome';
+const CHROME_PATH = process.env.CHROME_BIN || '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome';
 
 let AcomEngine, createUnit, ARCHETYPES, calculateHitChance;
 try {
@@ -350,6 +350,7 @@ describe('Adversarial M4: Final E2E Verification & Tactical Hardening [Static In
         try {
             chromeProc = spawn(CHROME_PATH, [
                 '--headless=new',
+                '--no-sandbox',
                 `--remote-debugging-port=${cdpPort}`,
                 `--user-data-dir=${userDataDir}`,
                 '--disable-gpu',
@@ -366,7 +367,7 @@ describe('Adversarial M4: Final E2E Verification & Tactical Hardening [Static In
                 await sleep(100);
                 try {
                     const list = await fetchJSON(`http://127.0.0.1:${cdpPort}/json/list`);
-                    const pageTarget = list.find(t => t.type === 'page' && !t.url.startsWith('chrome-extension')) || list.find(t => t.type === 'page') || list[0];
+                    const pageTarget = list.find(t => t.type === 'page' && !t.url.startsWith('chrome-extension') && t.url !== 'about:blank') || list.find(t => t.type === 'page' && !t.url.startsWith('chrome-extension')) || list.find(t => t.type === 'page') || list[0];
                     if (pageTarget && pageTarget.webSocketDebuggerUrl) {
                         debuggerUrl = pageTarget.webSocketDebuggerUrl;
                         break;
