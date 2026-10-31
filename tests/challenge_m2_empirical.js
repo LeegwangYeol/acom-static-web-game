@@ -15,7 +15,7 @@ const fs = require('fs');
 const os = require('os');
 const net = require('net');
 
-const CHROME_PATH = '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome';
+const CHROME_PATH = process.env.CHROME_BIN || (require('os').platform() === 'darwin' ? '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome' : '/usr/bin/google-chrome');
 
 function getFreePort() {
     return new Promise((resolve, reject) => {
@@ -112,6 +112,7 @@ async function runEmpiricalChallenge() {
         console.log(`[2/5] Launching Headless Chrome on CDP port ${cdpPort}...`);
         chromeProc = spawn(CHROME_PATH, [
             '--headless=new',
+            '--no-sandbox',
             `--remote-debugging-port=${cdpPort}`,
             `--user-data-dir=${userDataDir}`,
             '--disable-gpu',
@@ -128,7 +129,7 @@ async function runEmpiricalChallenge() {
             await sleep(100);
             try {
                 const list = await fetchJSON(`http://127.0.0.1:${cdpPort}/json/list`);
-                const pageTarget = list.find(t => t.type === 'page' && !t.url.startsWith('chrome-extension')) || list[0];
+                const pageTarget = list.find(t => t.type === 'page' && !t.url.includes('chrome-extension') && !t.url.includes('about:blank')) || list.find(t => t.type === 'page' && !t.url.includes('chrome-extension'));
                 if (pageTarget && pageTarget.webSocketDebuggerUrl) {
                     debuggerUrl = pageTarget.webSocketDebuggerUrl;
                     break;
