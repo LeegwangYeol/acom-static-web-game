@@ -1,6 +1,6 @@
 {
-  "timestamp": "2026-08-27T01:44:14.966Z",
-  "gameUrl": "http://127.0.0.1:50485/index.html",
+  "timestamp": "2026-11-02T00:35:51.725Z",
+  "gameUrl": "http://127.0.0.1:43233/index.html",
   "mode": "static_serverless",
   "status": "PASS",
   "domVerification": {
@@ -17,7 +17,7 @@
         "top": "60px",
         "zIndex": "15",
         "hasSprite": true,
-        "bgImage": "url(\"http://127.0.0.1:50485/assets/characters/ally_assault.png\")",
+        "bgImage": "url(\"http://127.0.0.1:43233/assets/characters/ally_assault.png\")",
         "hasHpBar": true
       },
       {
@@ -27,7 +27,7 @@
         "top": "180px",
         "zIndex": "35",
         "hasSprite": true,
-        "bgImage": "url(\"http://127.0.0.1:50485/assets/characters/ally_recon.png\")",
+        "bgImage": "url(\"http://127.0.0.1:43233/assets/characters/ally_recon.png\")",
         "hasHpBar": true
       },
       {
@@ -37,7 +37,7 @@
         "top": "0px",
         "zIndex": "5",
         "hasSprite": true,
-        "bgImage": "url(\"http://127.0.0.1:50485/assets/characters/ally_heavy.png\")",
+        "bgImage": "url(\"http://127.0.0.1:43233/assets/characters/ally_heavy.png\")",
         "hasHpBar": true
       },
       {
@@ -47,7 +47,7 @@
         "top": "480px",
         "zIndex": "85",
         "hasSprite": true,
-        "bgImage": "url(\"http://127.0.0.1:50485/assets/characters/enemy_mutant.png\")",
+        "bgImage": "url(\"http://127.0.0.1:43233/assets/characters/enemy_mutant.png\")",
         "hasHpBar": true
       },
       {
@@ -57,7 +57,7 @@
         "top": "300px",
         "zIndex": "55",
         "hasSprite": true,
-        "bgImage": "url(\"http://127.0.0.1:50485/assets/characters/enemy_scout.png\")",
+        "bgImage": "url(\"http://127.0.0.1:43233/assets/characters/enemy_scout.png\")",
         "hasHpBar": true
       },
       {
@@ -67,7 +67,7 @@
         "top": "540px",
         "zIndex": "95",
         "hasSprite": true,
-        "bgImage": "url(\"http://127.0.0.1:50485/assets/characters/enemy_heavy.png\")",
+        "bgImage": "url(\"http://127.0.0.1:43233/assets/characters/enemy_heavy.png\")",
         "hasHpBar": true
       }
     ]
@@ -82,55 +82,55 @@
     "errors": [],
     "requests": [
       {
-        "url": "http://127.0.0.1:50485/index.html",
+        "url": "http://127.0.0.1:43233/index.html",
         "status": 200,
         "statusText": "OK",
         "mimeType": "text/html"
       },
       {
-        "url": "http://127.0.0.1:50485/assets/characters/ally_assault.png",
-        "status": 200,
-        "statusText": "OK",
-        "mimeType": "image/png"
-      },
-      {
-        "url": "http://127.0.0.1:50485/assets/characters/enemy_mutant.png",
-        "status": 200,
-        "statusText": "OK",
-        "mimeType": "image/png"
-      },
-      {
-        "url": "http://127.0.0.1:50485/style.css",
+        "url": "http://127.0.0.1:43233/style.css",
         "status": 200,
         "statusText": "OK",
         "mimeType": "text/css"
       },
       {
-        "url": "http://127.0.0.1:50485/game.js",
+        "url": "http://127.0.0.1:43233/assets/characters/ally_assault.png",
+        "status": 200,
+        "statusText": "OK",
+        "mimeType": "image/png"
+      },
+      {
+        "url": "http://127.0.0.1:43233/assets/characters/enemy_mutant.png",
+        "status": 200,
+        "statusText": "OK",
+        "mimeType": "image/png"
+      },
+      {
+        "url": "http://127.0.0.1:43233/game.js",
         "status": 200,
         "statusText": "OK",
         "mimeType": "application/javascript"
       },
       {
-        "url": "http://127.0.0.1:50485/assets/characters/ally_recon.png",
+        "url": "http://127.0.0.1:43233/assets/characters/ally_recon.png",
         "status": 200,
         "statusText": "OK",
         "mimeType": "image/png"
       },
       {
-        "url": "http://127.0.0.1:50485/assets/characters/enemy_scout.png",
+        "url": "http://127.0.0.1:43233/assets/characters/ally_heavy.png",
         "status": 200,
         "statusText": "OK",
         "mimeType": "image/png"
       },
       {
-        "url": "http://127.0.0.1:50485/assets/characters/enemy_heavy.png",
+        "url": "http://127.0.0.1:43233/assets/characters/enemy_scout.png",
         "status": 200,
         "statusText": "OK",
         "mimeType": "image/png"
       },
       {
-        "url": "http://127.0.0.1:50485/assets/characters/ally_heavy.png",
+        "url": "http://127.0.0.1:43233/assets/characters/enemy_heavy.png",
         "status": 200,
         "statusText": "OK",
         "mimeType": "image/png"

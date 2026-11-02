@@ -11,7 +11,7 @@ const os = require('os');
 const net = require('net');
 
 const ROOT_DIR = path.resolve(__dirname, '..');
-const CHROME_PATH = '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome';
+const CHROME_PATH = process.env.CHROME_BIN || (require('fs').existsSync('/usr/bin/google-chrome') ? '/usr/bin/google-chrome' : '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome');
 const INDEX_HTML_FILE_URL = `file://${path.join(ROOT_DIR, 'index.html')}`;
 
 function getFreePort() {
@@ -68,7 +68,7 @@ async function runFileProtocolTest() {
             await sleep(100);
             try {
                 const list = await fetchJSON(`http://127.0.0.1:${cdpPort}/json/list`);
-                const pageTarget = list.find(t => t.type === 'page' && !t.url.startsWith('chrome-extension')) || list[0];
+                const pageTarget = list.find(t => t.type === 'page' && t.url !== 'about:blank' && !t.url.startsWith('chrome-extension')) || list.find(t => t.type === 'page' && !t.url.startsWith('chrome-extension')) || list.find(t => t.type === 'page') || list[0];
                 if (pageTarget && pageTarget.webSocketDebuggerUrl) {
                     debuggerUrl = pageTarget.webSocketDebuggerUrl;
                     break;
