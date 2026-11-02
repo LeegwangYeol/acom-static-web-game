@@ -18,7 +18,7 @@ const zlib = require('zlib');
 const crypto = require('crypto');
 
 const REPORT_PATH = path.resolve(__dirname, '../.agents/reports/empirical_m4_challenge_report.json');
-const CHROME_PATH = '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome';
+const CHROME_PATH = process.env.CHROME_BIN || (require('fs').existsSync('/usr/bin/google-chrome') ? '/usr/bin/google-chrome' : '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome');
 const ASSETS_DIR = path.resolve(__dirname, '../assets/characters');
 const APP_PORT = 3000;
 const API_BASE = `http://127.0.0.1:${APP_PORT}/api`;
@@ -288,7 +288,7 @@ async function verifyHeadlessChrome() {
             try {
                 const res = await fetch(`http://127.0.0.1:${cdpPort}/json/list`);
                 const list = await res.json();
-                const pageTarget = list.find(t => t.type === 'page' && !t.url.startsWith('chrome-extension')) || list[0];
+                const pageTarget = list.find(t => t.type === 'page' && t.url !== 'about:blank' && !t.url.startsWith('chrome-extension')) || list.find(t => t.type === 'page' && !t.url.startsWith('chrome-extension')) || list.find(t => t.type === 'page') || list[0];
                 if (pageTarget && pageTarget.webSocketDebuggerUrl) {
                     debuggerUrl = pageTarget.webSocketDebuggerUrl;
                     break;

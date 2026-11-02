@@ -1,13 +1,13 @@
 {
   "gate": "AC_TACTICAL_WEB_GAME_STATIC",
-  "timestamp": "2026-08-27T01:44:27.438Z",
+  "timestamp": "2026-11-02T00:35:59.857Z",
   "executionMode": "pure_static_serverless",
   "verdict": "PASS",
   "summary": {
     "totalSuites": 10,
     "passedSuites": 10,
     "failedSuites": 0,
-    "durationMs": 17421
+    "durationMs": 10787
   },
   "acceptanceCriteria": {
     "assetCheck": {
@@ -46,61 +46,61 @@
     {
       "name": "Asset Non-Pixel-Art Validator",
       "passed": true,
-      "durationMs": 138,
+      "durationMs": 72,
       "exitCode": 0
     },
     {
       "name": "DOM & Network Integrity (Headless Chrome)",
       "passed": true,
-      "durationMs": 4847,
+      "durationMs": 2603,
       "exitCode": 0
     },
     {
       "name": "Isometric Layout & Non-Clipping (Headless Chrome)",
       "passed": true,
-      "durationMs": 4035,
+      "durationMs": 2593,
       "exitCode": 0
     },
     {
       "name": "Tier 1: Feature Coverage (F1-F12)",
       "passed": true,
-      "durationMs": 396,
+      "durationMs": 187,
       "exitCode": 0
     },
     {
       "name": "Tier 2: Boundary & Corner Cases",
       "passed": true,
-      "durationMs": 347,
+      "durationMs": 148,
       "exitCode": 0
     },
     {
       "name": "Tier 3: Pairwise Combinations",
       "passed": true,
-      "durationMs": 418,
+      "durationMs": 147,
       "exitCode": 0
     },
     {
       "name": "Tier 4: Realistic Combat Scenarios",
       "passed": true,
-      "durationMs": 240,
+      "durationMs": 149,
       "exitCode": 0
     },
     {
       "name": "Tier 5: Adversarial Empirical Challenge (M2 & M4)",
       "passed": true,
-      "durationMs": 4832,
+      "durationMs": 2842,
       "exitCode": 0
     },
     {
       "name": "Legacy In-Memory Regression Tests",
       "passed": true,
-      "durationMs": 214,
+      "durationMs": 49,
       "exitCode": 0
     },
     {
       "name": "In-Memory State Fuzz Tests (10,000 ops)",
       "passed": true,
-      "durationMs": 1954,
+      "durationMs": 1994,
       "exitCode": 0
     }
   ]
