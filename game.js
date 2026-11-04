@@ -681,7 +681,7 @@ function showFloatingText(x, y, text, color = '#ff3333') {
     floatEl.style.left = `${x * cellSize + cellSize / 2}px`;
     floatEl.style.top = `${y * cellSize}px`;
     floatEl.style.color = color;
-    ui.unitsLayer.appendChild(floatEl);
+    if (ui.unitsLayer) ui.unitsLayer.appendChild(floatEl);
     setTimeout(() => {
         if (floatEl.parentNode) floatEl.remove();
     }, 1000);
@@ -758,24 +758,24 @@ function checkEndgame() {
         if (modalCard) {
             modalCard.className = 'mission-modal-card victory';
         }
-        ui.modalTitle.innerText = 'MISSION ACCOMPLISHED';
-        ui.modalSubtitle.innerText = 'All hostile biothreats eliminated. Sector 7 secured.';
-        ui.modalStatStatus.innerText = 'VICTORY';
-        ui.modalStatStatus.style.color = 'var(--neon-emerald)';
-        ui.modalStatSurvivors.innerText = `${alivePlayers.length} / ${totalPlayers}`;
-        ui.modalStatKills.innerText = `${totalEnemies} / ${totalEnemies}`;
+        if (ui.modalTitle) ui.modalTitle.innerText = 'MISSION ACCOMPLISHED';
+        if (ui.modalSubtitle) ui.modalSubtitle.innerText = 'All hostile biothreats eliminated. Sector 7 secured.';
+        if (ui.modalStatStatus) ui.modalStatStatus.innerText = 'VICTORY';
+        if (ui.modalStatStatus) ui.modalStatStatus.style.color = 'var(--neon-emerald)';
+        if (ui.modalStatSurvivors) ui.modalStatSurvivors.innerText = `${alivePlayers.length} / ${totalPlayers}`;
+        if (ui.modalStatKills) ui.modalStatKills.innerText = `${totalEnemies} / ${totalEnemies}`;
         ui.missionModal.classList.add('active');
     } else if (alivePlayers.length === 0 && totalPlayers > 0) {
         // Player Defeat
         if (modalCard) {
             modalCard.className = 'mission-modal-card defeat';
         }
-        ui.modalTitle.innerText = 'MISSION FAILED';
-        ui.modalSubtitle.innerText = 'All squad operatives lost in action. Sector overrun.';
-        ui.modalStatStatus.innerText = 'DEFEAT';
-        ui.modalStatStatus.style.color = 'var(--neon-crimson)';
-        ui.modalStatSurvivors.innerText = `0 / ${totalPlayers}`;
-        ui.modalStatKills.innerText = `${totalEnemies - aliveEnemies.length} / ${totalEnemies}`;
+        if (ui.modalTitle) ui.modalTitle.innerText = 'MISSION FAILED';
+        if (ui.modalSubtitle) ui.modalSubtitle.innerText = 'All squad operatives lost in action. Sector overrun.';
+        if (ui.modalStatStatus) ui.modalStatStatus.innerText = 'DEFEAT';
+        if (ui.modalStatStatus) ui.modalStatStatus.style.color = 'var(--neon-crimson)';
+        if (ui.modalStatSurvivors) ui.modalStatSurvivors.innerText = `0 / ${totalPlayers}`;
+        if (ui.modalStatKills) ui.modalStatKills.innerText = `${totalEnemies - aliveEnemies.length} / ${totalEnemies}`;
         ui.missionModal.classList.add('active');
     }
 }
@@ -792,7 +792,7 @@ function render() {
 
 function renderSquadDock() {
     if (!ui.squadDock || !gameState) return;
-    ui.squadDock.innerHTML = '';
+    if (ui.squadDock) ui.squadDock.innerHTML = '';
 
     const players = gameState.units.filter(u => u.type === 'player');
     players.forEach(unit => {
@@ -834,12 +834,12 @@ function renderSquadDock() {
             });
         }
 
-        ui.squadDock.appendChild(card);
+        if (ui.squadDock) ui.squadDock.appendChild(card);
     });
 }
 
 function renderGridOnce() {
-    ui.gridContainer.innerHTML = '';
+    if (ui.gridContainer) ui.gridContainer.innerHTML = '';
     const GRID_HEIGHT = gameState.grid.length;
     const GRID_WIDTH = gameState.grid[0].length;
     
@@ -883,7 +883,7 @@ function renderGridOnce() {
                 }
             });
 
-            ui.gridContainer.appendChild(cell);
+            if (ui.gridContainer) ui.gridContainer.appendChild(cell);
         }
     }
 }
@@ -976,7 +976,7 @@ function renderUnits() {
                 }
             });
 
-            ui.unitsLayer.appendChild(unitEl);
+            if (ui.unitsLayer) ui.unitsLayer.appendChild(unitEl);
         }
 
         // Update Position
@@ -1137,14 +1137,14 @@ function highlightTargetableCells() {
 function updateUI() {
     const player = getSelectedUnit();
     if (player) {
-        ui.unitName.innerText = (player.name || player.id).toUpperCase();
-        ui.unitHp.innerText = `${player.hp}/${player.maxHp}`;
+        if (ui.unitName) ui.unitName.innerText = (player.name || player.id).toUpperCase();
+        if (ui.unitHp) ui.unitHp.innerText = `${player.hp}/${player.maxHp}`;
         if (ui.unitHpFill) {
             const hpPercent = Math.max(0, (player.hp / player.maxHp) * 100);
-            ui.unitHpFill.style.width = `${hpPercent}%`;
+            if (ui.unitHpFill) ui.unitHpFill.style.width = `${hpPercent}%`;
         }
-        ui.unitAim.innerText = `${player.aim}%`;
-        ui.unitMobility.innerText = player.mobility;
+        if (ui.unitAim) ui.unitAim.innerText = `${player.aim}%`;
+        if (ui.unitMobility) ui.unitMobility.innerText = player.mobility;
         if (ui.unitDamage) ui.unitDamage.innerText = player.weaponDamage || player.attack || 4;
         if (ui.unitRange) ui.unitRange.innerText = player.range || 5;
         if (ui.unitClassBadge) ui.unitClassBadge.innerText = (player.unitClass || 'Assault').toUpperCase();
@@ -1154,32 +1154,32 @@ function updateUI() {
             ui.unitPortraitImg.src = player.portrait || `assets/characters/${archetype}.png`;
         }
         
-        ui.apCounter.innerText = `AP: ${player.ap}`;
+        if (ui.apCounter) ui.apCounter.innerText = `AP: ${player.ap}`;
         
-        ui.btnMove.disabled = player.ap <= 0 || gameState.currentTurn !== 'player';
-        ui.btnShoot.disabled = player.ap <= 0 || gameState.currentTurn !== 'player';
-        ui.btnEndTurn.disabled = gameState.currentTurn !== 'player';
+        if (ui.btnMove) ui.btnMove.disabled = player.ap <= 0 || gameState.currentTurn !== 'player';
+        if (ui.btnShoot) ui.btnShoot.disabled = player.ap <= 0 || gameState.currentTurn !== 'player';
+        if (ui.btnEndTurn) ui.btnEndTurn.disabled = gameState.currentTurn !== 'player';
     } else {
-        ui.unitName.innerText = gameState && gameState.currentTurn === 'player' ? "SELECT AN OPERATIVE" : "ENEMY ACTIVITY...";
-        ui.unitHp.innerText = '-';
+        if (ui.unitName) ui.unitName.innerText = gameState && gameState.currentTurn === 'player' ? "SELECT AN OPERATIVE" : "ENEMY ACTIVITY...";
+        if (ui.unitHp) ui.unitHp.innerText = '-';
         if (ui.unitHpFill) ui.unitHpFill.style.width = '0%';
-        ui.unitAim.innerText = '-';
-        ui.unitMobility.innerText = '-';
+        if (ui.unitAim) ui.unitAim.innerText = '-';
+        if (ui.unitMobility) ui.unitMobility.innerText = '-';
         if (ui.unitDamage) ui.unitDamage.innerText = '-';
         if (ui.unitRange) ui.unitRange.innerText = '-';
         if (ui.unitClassBadge) ui.unitClassBadge.innerText = 'STANDBY';
         
-        ui.apCounter.innerText = `AP: 0`;
+        if (ui.apCounter) ui.apCounter.innerText = `AP: 0`;
         
-        ui.btnMove.disabled = true;
-        ui.btnShoot.disabled = true;
-        ui.btnEndTurn.disabled = !gameState || gameState.currentTurn !== 'player';
+        if (ui.btnMove) ui.btnMove.disabled = true;
+        if (ui.btnShoot) ui.btnShoot.disabled = true;
+        if (ui.btnEndTurn) ui.btnEndTurn.disabled = !gameState || gameState.currentTurn !== 'player';
     }
     
     if (gameState) {
-        ui.turnIndicator.innerText = gameState.currentTurn === 'player' ? 'PLAYER TURN' : 'ALIEN ACTIVITY';
-        ui.turnIndicator.style.color = gameState.currentTurn === 'player' ? 'var(--neon-cyan)' : 'var(--neon-crimson)';
-        ui.turnIndicator.style.borderColor = gameState.currentTurn === 'player' ? 'var(--neon-cyan)' : 'var(--neon-crimson)';
+        if (ui.turnIndicator) ui.turnIndicator.innerText = gameState.currentTurn === 'player' ? 'PLAYER TURN' : 'ALIEN ACTIVITY';
+        if (ui.turnIndicator) ui.turnIndicator.style.color = gameState.currentTurn === 'player' ? 'var(--neon-cyan)' : 'var(--neon-crimson)';
+        if (ui.turnIndicator) ui.turnIndicator.style.borderColor = gameState.currentTurn === 'player' ? 'var(--neon-cyan)' : 'var(--neon-crimson)';
     }
 }
 
@@ -1199,31 +1199,31 @@ function renderTargetPreview() {
     }
 
     if (!target || !actor) {
-        ui.targetPreviewIdle.style.display = 'flex';
-        ui.targetPreviewActive.style.display = 'none';
+        if (ui.targetPreviewIdle) ui.targetPreviewIdle.style.display = 'flex';
+        if (ui.targetPreviewActive) ui.targetPreviewActive.style.display = 'none';
         if (ui.targetClassBadge) {
-            ui.targetClassBadge.innerText = 'SCANNING';
-            ui.targetClassBadge.className = 'badge badge-enemy';
+            if (ui.targetClassBadge) ui.targetClassBadge.innerText = 'SCANNING';
+            if (ui.targetClassBadge) ui.targetClassBadge.className = 'badge badge-enemy';
         }
         return;
     }
 
     // Active target preview
-    ui.targetPreviewIdle.style.display = 'none';
-    ui.targetPreviewActive.style.display = 'flex';
+    if (ui.targetPreviewIdle) ui.targetPreviewIdle.style.display = 'none';
+    if (ui.targetPreviewActive) ui.targetPreviewActive.style.display = 'flex';
 
     const targetArchetype = target.archetype || 'enemy_mutant';
     if (ui.targetPortraitImg) {
-        ui.targetPortraitImg.src = target.portrait || `assets/characters/${targetArchetype}.png`;
+        if (ui.targetPortraitImg) ui.targetPortraitImg.src = target.portrait || `assets/characters/${targetArchetype}.png`;
     }
     if (ui.targetName) ui.targetName.innerText = (target.name || target.id).toUpperCase();
     if (ui.targetClassBadge) {
-        ui.targetClassBadge.innerText = (target.unitClass || 'Mutant').toUpperCase();
+        if (ui.targetClassBadge) ui.targetClassBadge.innerText = (target.unitClass || 'Mutant').toUpperCase();
     }
     if (ui.targetHpText) ui.targetHpText.innerText = `${target.hp}/${target.maxHp}`;
     if (ui.targetHpFill) {
         const hpPercent = Math.max(0, (target.hp / target.maxHp) * 100);
-        ui.targetHpFill.style.width = `${hpPercent}%`;
+        if (ui.targetHpFill) ui.targetHpFill.style.width = `${hpPercent}%`;
     }
 
     // Cover calculation
@@ -1269,7 +1269,7 @@ function renderTargetPreview() {
 
 function renderLogs() {
     if (!gameState || !ui.combatLog) return;
-    ui.combatLog.innerHTML = '';
+    if (ui.combatLog) ui.combatLog.innerHTML = '';
     const reversedLogs = [...gameState.logs].reverse();
     
     reversedLogs.forEach(msg => {
@@ -1299,7 +1299,7 @@ function renderLogs() {
         }
         
         p.innerHTML = `${tagHtml} <span>${msg}</span>`;
-        ui.combatLog.appendChild(p);
+        if (ui.combatLog) ui.combatLog.appendChild(p);
     });
 }
 
