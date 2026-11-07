@@ -4,7 +4,7 @@ const fs = require('fs');
 const net = require('net');
 const http = require('http');
 
-const CHROME_PATH = '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome';
+const CHROME_PATH = process.env.CHROME_BIN || (require('fs').existsSync('/usr/bin/google-chrome') ? '/usr/bin/google-chrome' : '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome');
 const ROOT_DIR = path.resolve(__dirname, '../..');
 
 function getFreePort() {

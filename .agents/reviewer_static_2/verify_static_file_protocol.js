@@ -4,7 +4,7 @@ const fs = require('fs');
 const net = require('net');
 const http = require('http');
 
-const CHROME_PATH = '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome';
+const CHROME_PATH = process.env.CHROME_BIN || (require('fs').existsSync('/usr/bin/google-chrome') ? '/usr/bin/google-chrome' : '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome');
 const HTML_FILE = path.resolve(__dirname, '../../index.html');
 const FILE_URL = `file://${HTML_FILE}`;
 
