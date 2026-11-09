@@ -635,10 +635,10 @@ function showTurnBanner(turn) {
     
     if (turn === 'player') {
         ui.turnBanner.className = 'turn-banner-overlay player-phase show';
-        ui.turnBannerText.innerText = 'PLAYER PHASE';
+        if (ui.turnBannerText) ui.turnBannerText.innerText = 'PLAYER PHASE';
     } else {
         ui.turnBanner.className = 'turn-banner-overlay enemy-phase show';
-        ui.turnBannerText.innerText = 'ALIEN ACTIVITY';
+        if (ui.turnBannerText) ui.turnBannerText.innerText = 'ALIEN ACTIVITY';
     }
 
     setTimeout(() => {
@@ -758,24 +758,24 @@ function checkEndgame() {
         if (modalCard) {
             modalCard.className = 'mission-modal-card victory';
         }
-        ui.modalTitle.innerText = 'MISSION ACCOMPLISHED';
-        ui.modalSubtitle.innerText = 'All hostile biothreats eliminated. Sector 7 secured.';
-        ui.modalStatStatus.innerText = 'VICTORY';
-        ui.modalStatStatus.style.color = 'var(--neon-emerald)';
-        ui.modalStatSurvivors.innerText = `${alivePlayers.length} / ${totalPlayers}`;
-        ui.modalStatKills.innerText = `${totalEnemies} / ${totalEnemies}`;
+        if (ui.modalTitle) ui.modalTitle.innerText = 'MISSION ACCOMPLISHED';
+        if (ui.modalSubtitle) ui.modalSubtitle.innerText = 'All hostile biothreats eliminated. Sector 7 secured.';
+        if (ui.modalStatStatus) ui.modalStatStatus.innerText = 'VICTORY';
+        if (ui.modalStatStatus) ui.modalStatStatus.style.color = 'var(--neon-emerald)';
+        if (ui.modalStatSurvivors) ui.modalStatSurvivors.innerText = `${alivePlayers.length} / ${totalPlayers}`;
+        if (ui.modalStatKills) ui.modalStatKills.innerText = `${totalEnemies} / ${totalEnemies}`;
         ui.missionModal.classList.add('active');
     } else if (alivePlayers.length === 0 && totalPlayers > 0) {
         // Player Defeat
         if (modalCard) {
             modalCard.className = 'mission-modal-card defeat';
         }
-        ui.modalTitle.innerText = 'MISSION FAILED';
-        ui.modalSubtitle.innerText = 'All squad operatives lost in action. Sector overrun.';
-        ui.modalStatStatus.innerText = 'DEFEAT';
-        ui.modalStatStatus.style.color = 'var(--neon-crimson)';
-        ui.modalStatSurvivors.innerText = `0 / ${totalPlayers}`;
-        ui.modalStatKills.innerText = `${totalEnemies - aliveEnemies.length} / ${totalEnemies}`;
+        if (ui.modalTitle) ui.modalTitle.innerText = 'MISSION FAILED';
+        if (ui.modalSubtitle) ui.modalSubtitle.innerText = 'All squad operatives lost in action. Sector overrun.';
+        if (ui.modalStatStatus) ui.modalStatStatus.innerText = 'DEFEAT';
+        if (ui.modalStatStatus) ui.modalStatStatus.style.color = 'var(--neon-crimson)';
+        if (ui.modalStatSurvivors) ui.modalStatSurvivors.innerText = `0 / ${totalPlayers}`;
+        if (ui.modalStatKills) ui.modalStatKills.innerText = `${totalEnemies - aliveEnemies.length} / ${totalEnemies}`;
         ui.missionModal.classList.add('active');
     }
 }
@@ -1137,14 +1137,14 @@ function highlightTargetableCells() {
 function updateUI() {
     const player = getSelectedUnit();
     if (player) {
-        ui.unitName.innerText = (player.name || player.id).toUpperCase();
-        ui.unitHp.innerText = `${player.hp}/${player.maxHp}`;
+        if (ui.unitName) ui.unitName.innerText = (player.name || player.id).toUpperCase();
+        if (ui.unitHp) ui.unitHp.innerText = `${player.hp}/${player.maxHp}`;
         if (ui.unitHpFill) {
             const hpPercent = Math.max(0, (player.hp / player.maxHp) * 100);
             ui.unitHpFill.style.width = `${hpPercent}%`;
         }
-        ui.unitAim.innerText = `${player.aim}%`;
-        ui.unitMobility.innerText = player.mobility;
+        if (ui.unitAim) ui.unitAim.innerText = `${player.aim}%`;
+        if (ui.unitMobility) ui.unitMobility.innerText = player.mobility;
         if (ui.unitDamage) ui.unitDamage.innerText = player.weaponDamage || player.attack || 4;
         if (ui.unitRange) ui.unitRange.innerText = player.range || 5;
         if (ui.unitClassBadge) ui.unitClassBadge.innerText = (player.unitClass || 'Assault').toUpperCase();
@@ -1154,32 +1154,32 @@ function updateUI() {
             ui.unitPortraitImg.src = player.portrait || `assets/characters/${archetype}.png`;
         }
         
-        ui.apCounter.innerText = `AP: ${player.ap}`;
+        if (ui.apCounter) ui.apCounter.innerText = `AP: ${player.ap}`;
         
-        ui.btnMove.disabled = player.ap <= 0 || gameState.currentTurn !== 'player';
-        ui.btnShoot.disabled = player.ap <= 0 || gameState.currentTurn !== 'player';
-        ui.btnEndTurn.disabled = gameState.currentTurn !== 'player';
+        if (ui.btnMove) ui.btnMove.disabled = player.ap <= 0 || gameState.currentTurn !== 'player';
+        if (ui.btnShoot) ui.btnShoot.disabled = player.ap <= 0 || gameState.currentTurn !== 'player';
+        if (ui.btnEndTurn) ui.btnEndTurn.disabled = gameState.currentTurn !== 'player';
     } else {
-        ui.unitName.innerText = gameState && gameState.currentTurn === 'player' ? "SELECT AN OPERATIVE" : "ENEMY ACTIVITY...";
-        ui.unitHp.innerText = '-';
+        if (ui.unitName) ui.unitName.innerText = gameState && gameState.currentTurn === 'player' ? "SELECT AN OPERATIVE" : "ENEMY ACTIVITY...";
+        if (ui.unitHp) ui.unitHp.innerText = '-';
         if (ui.unitHpFill) ui.unitHpFill.style.width = '0%';
-        ui.unitAim.innerText = '-';
-        ui.unitMobility.innerText = '-';
+        if (ui.unitAim) ui.unitAim.innerText = '-';
+        if (ui.unitMobility) ui.unitMobility.innerText = '-';
         if (ui.unitDamage) ui.unitDamage.innerText = '-';
         if (ui.unitRange) ui.unitRange.innerText = '-';
         if (ui.unitClassBadge) ui.unitClassBadge.innerText = 'STANDBY';
         
-        ui.apCounter.innerText = `AP: 0`;
+        if (ui.apCounter) ui.apCounter.innerText = `AP: 0`;
         
-        ui.btnMove.disabled = true;
-        ui.btnShoot.disabled = true;
-        ui.btnEndTurn.disabled = !gameState || gameState.currentTurn !== 'player';
+        if (ui.btnMove) ui.btnMove.disabled = true;
+        if (ui.btnShoot) ui.btnShoot.disabled = true;
+        if (ui.btnEndTurn) ui.btnEndTurn.disabled = !gameState || gameState.currentTurn !== 'player';
     }
     
     if (gameState) {
-        ui.turnIndicator.innerText = gameState.currentTurn === 'player' ? 'PLAYER TURN' : 'ALIEN ACTIVITY';
-        ui.turnIndicator.style.color = gameState.currentTurn === 'player' ? 'var(--neon-cyan)' : 'var(--neon-crimson)';
-        ui.turnIndicator.style.borderColor = gameState.currentTurn === 'player' ? 'var(--neon-cyan)' : 'var(--neon-crimson)';
+        if (ui.turnIndicator) ui.turnIndicator.innerText = gameState.currentTurn === 'player' ? 'PLAYER TURN' : 'ALIEN ACTIVITY';
+        if (ui.turnIndicator) ui.turnIndicator.style.color = gameState.currentTurn === 'player' ? 'var(--neon-cyan)' : 'var(--neon-crimson)';
+        if (ui.turnIndicator) ui.turnIndicator.style.borderColor = gameState.currentTurn === 'player' ? 'var(--neon-cyan)' : 'var(--neon-crimson)';
     }
 }
 
@@ -1202,7 +1202,7 @@ function renderTargetPreview() {
         ui.targetPreviewIdle.style.display = 'flex';
         ui.targetPreviewActive.style.display = 'none';
         if (ui.targetClassBadge) {
-            ui.targetClassBadge.innerText = 'SCANNING';
+            if (ui.targetClassBadge) ui.targetClassBadge.innerText = 'SCANNING';
             ui.targetClassBadge.className = 'badge badge-enemy';
         }
         return;
@@ -1218,7 +1218,7 @@ function renderTargetPreview() {
     }
     if (ui.targetName) ui.targetName.innerText = (target.name || target.id).toUpperCase();
     if (ui.targetClassBadge) {
-        ui.targetClassBadge.innerText = (target.unitClass || 'Mutant').toUpperCase();
+        if (ui.targetClassBadge) ui.targetClassBadge.innerText = (target.unitClass || 'Mutant').toUpperCase();
     }
     if (ui.targetHpText) ui.targetHpText.innerText = `${target.hp}/${target.maxHp}`;
     if (ui.targetHpFill) {
@@ -1249,20 +1249,20 @@ function renderTargetPreview() {
     
     const dmg = actor.weaponDamage || actor.attack || 4;
     if (ui.targetExpectedDmg) {
-        ui.targetExpectedDmg.innerText = dmg >= target.hp ? `${dmg} DMG [LETHAL]` : `${dmg} DMG`;
-        ui.targetExpectedDmg.style.color = dmg >= target.hp ? 'var(--neon-crimson)' : 'var(--neon-amber)';
+        if (ui.targetExpectedDmg) ui.targetExpectedDmg.innerText = dmg >= target.hp ? `${dmg} DMG [LETHAL]` : `${dmg} DMG`;
+        if (ui.targetExpectedDmg) ui.targetExpectedDmg.style.color = dmg >= target.hp ? 'var(--neon-crimson)' : 'var(--neon-amber)';
     }
 
     if (ui.targetCoverBadge) {
         if (coverDefense === 40) {
-            ui.targetCoverBadge.className = 'cover-badge cover-full-badge';
-            ui.targetCoverBadge.innerText = 'FULL COVER (+40%)';
+            if (ui.targetCoverBadge) ui.targetCoverBadge.className = 'cover-badge cover-full-badge';
+            if (ui.targetCoverBadge) ui.targetCoverBadge.innerText = 'FULL COVER (+40%)';
         } else if (coverDefense === 20) {
-            ui.targetCoverBadge.className = 'cover-badge cover-half-badge';
-            ui.targetCoverBadge.innerText = 'HALF COVER (+20%)';
+            if (ui.targetCoverBadge) ui.targetCoverBadge.className = 'cover-badge cover-half-badge';
+            if (ui.targetCoverBadge) ui.targetCoverBadge.innerText = 'HALF COVER (+20%)';
         } else {
-            ui.targetCoverBadge.className = 'cover-badge cover-none';
-            ui.targetCoverBadge.innerText = 'NO COVER (FLANKED)';
+            if (ui.targetCoverBadge) ui.targetCoverBadge.className = 'cover-badge cover-none';
+            if (ui.targetCoverBadge) ui.targetCoverBadge.innerText = 'NO COVER (FLANKED)';
         }
     }
 }

@@ -15,7 +15,7 @@ const fs = require('fs');
 const os = require('os');
 const net = require('net');
 
-const CHROME_PATH = '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome';
+const CHROME_PATH = process.env.CHROME_BIN || (require("fs").existsSync("/usr/bin/google-chrome") ? "/usr/bin/google-chrome" : "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome");
 
 function getFreePort() {
     return new Promise((resolve, reject) => {
@@ -112,6 +112,7 @@ async function runEmpiricalChallenge() {
         console.log(`[2/5] Launching Headless Chrome on CDP port ${cdpPort}...`);
         chromeProc = spawn(CHROME_PATH, [
             '--headless=new',
+            '--no-sandbox',
             `--remote-debugging-port=${cdpPort}`,
             `--user-data-dir=${userDataDir}`,
             '--disable-gpu',
