@@ -14,7 +14,7 @@ const os = require('os');
 const net = require('net');
 
 const ASSETS_DIR = path.resolve(__dirname, '../assets/characters');
-const CHROME_PATH = '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome';
+const CHROME_PATH = process.env.CHROME_BIN || (require('fs').existsSync('/usr/bin/google-chrome') ? '/usr/bin/google-chrome' : '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome');
 
 const CHARACTERS = [
   'ally_assault',
@@ -309,6 +309,7 @@ async function runBrowserDecodeTest(assetList) {
   try {
     chromeProc = spawn(CHROME_PATH, [
       '--headless=new',
+            '--no-sandbox',
       `--remote-debugging-port=${cdpPort}`,
       `--user-data-dir=${userDataDir}`,
       '--disable-gpu',
@@ -324,7 +325,7 @@ async function runBrowserDecodeTest(assetList) {
       try {
         const res = await fetch(`http://127.0.0.1:${cdpPort}/json/list`);
         const list = await res.json();
-        const page = list.find(t => t.type === 'page' && !t.url.startsWith('chrome-extension')) || list.find(t => t.type === 'page');
+        const page = list.find(t => t.type === 'page' && !t.url.startsWith('chrome-extension') && !t.url.startsWith('about:blank')) || list.find(t => t.type === 'page');
         if (page && page.webSocketDebuggerUrl) {
           debuggerUrl = page.webSocketDebuggerUrl;
           break;
